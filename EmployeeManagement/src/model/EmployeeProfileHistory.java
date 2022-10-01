@@ -24,4 +24,15 @@ public class EmployeeProfileHistory {
         this.profileHistory = profileHistory;
     }
     
+    /**
+     * named addNewProfile
+     * creates empty "newProfile"
+     * 
+     * @return 
+     */
+    public EmployeeProfile addNewProfile(){
+        EmployeeProfile newProfile = new EmployeeProfile();
+        profileHistory.add(newProfile);
+        return newProfile;
+    }
 }
