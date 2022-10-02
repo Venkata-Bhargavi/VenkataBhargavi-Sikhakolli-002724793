@@ -109,6 +109,14 @@ public class EmployeeProfile {
     public void setTeamInfo(String teamInfo) {
         this.teamInfo = teamInfo;
     }
+    /**
+     * overriding the inherited function to return employee ID
+     * @return  
+     */
+    @Override
+    public String toString(){
+    return employeeId;
+}
     
     
 }
