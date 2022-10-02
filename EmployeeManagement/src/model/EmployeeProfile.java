@@ -14,7 +14,7 @@ public class EmployeeProfile {
     private String employeeId;
     private int age;
     private String gender;
-    private int phone;
+    private double phone;
     private String email;
     private String positionTitle;
     private String level;
@@ -62,11 +62,11 @@ public class EmployeeProfile {
         this.gender = gender;
     }
 
-    public int getPhone() {
+    public double getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(double phone) {
         this.phone = phone;
     }
 

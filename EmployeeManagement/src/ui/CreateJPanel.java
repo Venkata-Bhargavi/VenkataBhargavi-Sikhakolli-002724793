@@ -357,7 +357,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         String employeeId = txtEmployeeId.getText();
         int age = Integer.parseInt(txtAge.getText());
         String gender = txtGender.getText();
-        int phone = Integer.parseInt(txtPhone.getText());
+        double phone = Double.parseDouble(txtPhone.getText());
         String email = txtEmail.getText();
         String positionTitle = txtPositionTitle.getText();
         String level = txtLevel.getText();
@@ -470,18 +470,18 @@ public class CreateJPanel extends javax.swing.JPanel {
      * @param evt 
      */
     private void txtPhoneKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPhoneKeyReleased
-        // TODO add your handling code here:
-//        String PATTERN = "\\d{10}";  // pattern to check against input
-//        Pattern pattern = Pattern.compile(PATTERN);
-//        Matcher match = pattern.matcher(txtPhone.getText());
-//        if(!match.matches())
-//        {
-//            lblp.setText("Wrong Input. Please Try Again."); // throws error message
-//        }
-//        else
-//        {
-//            lblp.setText(null);
-//        }
+         //TODO add your handling code here:
+        String PATTERN = "^[0-9 +()-]{10}$";  // pattern to check against input
+        Pattern pattern = Pattern.compile(PATTERN);
+        Matcher match = pattern.matcher(txtPhone.getText());
+        if(!match.matches())
+        {
+            lblp.setText("Please Enter a 10 digit number."); // throws error message
+        }
+        else
+        {
+            lblp.setText(null);
+        }
     }//GEN-LAST:event_txtPhoneKeyReleased
 
     /**

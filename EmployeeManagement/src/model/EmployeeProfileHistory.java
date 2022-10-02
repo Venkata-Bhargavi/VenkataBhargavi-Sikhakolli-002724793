@@ -38,4 +38,14 @@ public class EmployeeProfileHistory {
         profileHistory.add(newProfile);
         return newProfile;
     }
+
+    /**
+     * deletes a selected profile from ArrayList of employee profiles.
+     * return : nothing
+     * @param selectedEntry 
+     */
+    public void deleteProfile(EmployeeProfile ep) {
+        
+        profileHistory.remove(ep); 
+    }
 }
