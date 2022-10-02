@@ -11,7 +11,9 @@ import java.util.ArrayList;
  * @author bhargavi
  */
 public class EmployeeProfileHistory {
+    
     private ArrayList<EmployeeProfile> profileHistory;
+    
     public EmployeeProfileHistory(){
         this.profileHistory = new ArrayList<EmployeeProfile>();
     }
@@ -31,6 +33,7 @@ public class EmployeeProfileHistory {
      * @return 
      */
     public EmployeeProfile addNewProfile(){
+        
         EmployeeProfile newProfile = new EmployeeProfile();
         profileHistory.add(newProfile);
         return newProfile;
