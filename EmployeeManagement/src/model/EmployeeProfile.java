@@ -8,7 +8,7 @@ import java.util.Date;
 
 /**
  *
- * @author bhargavi
+ * @author Venkata Bhargavi
  */
 public class EmployeeProfile {
     

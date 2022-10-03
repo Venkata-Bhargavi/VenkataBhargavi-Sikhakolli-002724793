@@ -18,7 +18,7 @@ import model.EmployeeProfileHistory;
 
 /**
  *
- * @author bhargavi
+ * @author Venkata Bhargavi
  */
 public class CreateJPanel extends javax.swing.JPanel {
 

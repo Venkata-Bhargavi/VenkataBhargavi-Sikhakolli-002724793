@@ -19,7 +19,7 @@ import model.EmployeeProfile;
 
 /**
  *
- * @author bhargavi
+ * @author  Venkata Bhargavi
  */
 public class DisplayJPanel extends javax.swing.JPanel {
 
