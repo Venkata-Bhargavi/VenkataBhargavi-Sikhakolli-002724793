@@ -282,7 +282,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         jdcCalendar.setDate(null);
         txtTeamInfo.setText("");
         txtPhone.setText("");
-        lblPhoto.setText(null);
+        lblPhotoDisplay.setIcon(null);
         }
 
 
