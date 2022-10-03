@@ -290,7 +290,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
           txtLevel.setText(selectedEntry.getLevel());
           txtPhone.setText(String.valueOf(selectedEntry.getPhone()));
           txtPositionTitle.setText(selectedEntry.getPositionTitle());
-          txtStartDate.setText(selectedEntry.getStartDate());
+          txtStartDate.setText(String.valueOf(selectedEntry.getStartDate()));
           txtTeamInfo.setText(selectedEntry.getTeamInfo());
 
 

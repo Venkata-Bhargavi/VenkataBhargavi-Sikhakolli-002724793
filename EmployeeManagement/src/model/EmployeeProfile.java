@@ -4,6 +4,8 @@
  */
 package model;
 
+import java.util.Date;
+
 /**
  *
  * @author bhargavi
@@ -14,11 +16,11 @@ public class EmployeeProfile {
     private String employeeId;
     private int age;
     private String gender;
-    private double phone;
+    private long phone;
     private String email;
     private String positionTitle;
     private String level;
-    private String startDate;
+    private Date startDate;
     private String teamInfo;
     private String photo;
 
@@ -62,11 +64,11 @@ public class EmployeeProfile {
         this.gender = gender;
     }
 
-    public double getPhone() {
+    public long getPhone() {
         return phone;
     }
 
-    public void setPhone(double phone) {
+    public void setPhone(long phone) {
         this.phone = phone;
     }
 
@@ -94,11 +96,11 @@ public class EmployeeProfile {
         this.level = level;
     }
 
-    public String getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(String startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
