@@ -19,9 +19,15 @@ functionalities include-
 - UI module has all the user interface files and their backend scripts for execution.
 - Model has all the intializations and data storage functionality.
 
+### Prerequisites
+- Need Java Development environment
+- Can use IDE's like NetBeans, IntelliJ, Eclipse.
+
 ### How to run?
 
 - Clone the repository using `git clone URL`.
 - Pull from main branch for updated project.
 
+### Contact 
 
+`sikhakolli.v@northeastern.edu`
