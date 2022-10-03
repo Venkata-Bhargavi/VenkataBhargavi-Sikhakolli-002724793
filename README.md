@@ -25,7 +25,7 @@ functionalities include-
 
 ### How to run?
 
-- Clone the repository using `git clone URL`.
+- Clone the repository using `git clone https://github.com/Venkata-Bhargavi/VenkataBhargavi-Sikhakolli-002724793.git`.
 - Pull from main branch for updated project.
 
 ### Contact 
