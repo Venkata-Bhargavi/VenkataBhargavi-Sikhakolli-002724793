@@ -7,6 +7,7 @@ An Employee profile management system that facilitates Human resource officers t
 ### Functionalities
 
 User can update details of employee like employeeID, name , age and other job details.
+
 functionalities include-
 - `Create` Creates a new profile for an employee
 - `Read`   Reading an existing employee profile
