@@ -5,10 +5,13 @@
 package ui;
 
 import java.awt.Image;
+import java.io.File;
 import java.util.Date;
 import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import model.EmployeeProfileHistory;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
@@ -22,6 +25,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
 
     
     EmployeeProfileHistory profileHistory;
+    public String photo_Path;
     /**
      * Creates new form DisplayJPanel
      */
@@ -45,23 +49,22 @@ public class DisplayJPanel extends javax.swing.JPanel {
         displayTable = new javax.swing.JTable();
         btnview = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        lblEmployeeId = new javax.swing.JLabel();
+        lblEmployeeName = new javax.swing.JLabel();
+        lblAge = new javax.swing.JLabel();
+        lblGender = new javax.swing.JLabel();
+        lblPhone = new javax.swing.JLabel();
+        lblEmail = new javax.swing.JLabel();
+        lblStartDate = new javax.swing.JLabel();
+        lblLevel = new javax.swing.JLabel();
+        lblTeamInfo = new javax.swing.JLabel();
+        lblPositionTitle = new javax.swing.JLabel();
         txtEmployeeId = new javax.swing.JTextField();
         txtEmployeeName = new javax.swing.JTextField();
         txtAge = new javax.swing.JTextField();
         txtGender = new javax.swing.JTextField();
         txtPhone = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
-        txtStartDate = new javax.swing.JTextField();
         txtLevel = new javax.swing.JTextField();
         txtTeamInfo = new javax.swing.JTextField();
         txtPositionTitle = new javax.swing.JTextField();
@@ -69,6 +72,8 @@ public class DisplayJPanel extends javax.swing.JPanel {
         btnUpdate = new javax.swing.JButton();
         lblSearch = new javax.swing.JLabel();
         txtSearch = new javax.swing.JTextField();
+        btnBrowse = new javax.swing.JButton();
+        jDateChooseSD = new com.toedter.calendar.JDateChooser();
 
         setPreferredSize(new java.awt.Dimension(1200, 1200));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -101,7 +106,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 1170, 197));
 
-        btnview.setText("View");
+        btnview.setText("View & Edit");
         btnview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnviewActionPerformed(evt);
@@ -117,35 +122,35 @@ public class DisplayJPanel extends javax.swing.JPanel {
         });
         add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, -1, -1));
 
-        jLabel2.setText("Employee Id");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
+        lblEmployeeId.setText("Employee Id");
+        add(lblEmployeeId, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
 
-        jLabel3.setText("Employee Name");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+        lblEmployeeName.setText("Employee Name");
+        add(lblEmployeeName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
 
-        jLabel4.setText("Age");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 480, -1, -1));
+        lblAge.setText("Age");
+        add(lblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 480, -1, -1));
 
-        jLabel5.setText("Gender");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, -1, -1));
+        lblGender.setText("Gender");
+        add(lblGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, -1, -1));
 
-        jLabel6.setText("Phone");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 560, -1, -1));
+        lblPhone.setText("Phone");
+        add(lblPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 560, -1, -1));
 
-        jLabel7.setText("E-mail");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, 74, -1));
+        lblEmail.setText("E-mail");
+        add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, 74, -1));
 
-        jLabel8.setText("Start Date");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 440, 74, -1));
+        lblStartDate.setText("Start Date");
+        add(lblStartDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 440, 74, -1));
 
-        jLabel9.setText("Level");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 480, 74, -1));
+        lblLevel.setText("Level");
+        add(lblLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 480, 74, -1));
 
-        jLabel10.setText("Team Info");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 520, 74, -1));
+        lblTeamInfo.setText("Team Info");
+        add(lblTeamInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 520, 74, -1));
 
-        jLabel11.setText("Position Title");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 560, -1, -1));
+        lblPositionTitle.setText("Position Title");
+        add(lblPositionTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 560, -1, -1));
 
         txtEmployeeId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,7 +163,6 @@ public class DisplayJPanel extends javax.swing.JPanel {
         add(txtGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 510, 195, -1));
         add(txtPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 560, 195, -1));
         add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 390, 195, -1));
-        add(txtStartDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 430, 195, -1));
 
         txtLevel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,7 +180,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
                 btnUpdateActionPerformed(evt);
             }
         });
-        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 620, -1, -1));
+        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 640, -1, -1));
 
         lblSearch.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblSearch.setText("Search");
@@ -188,6 +192,15 @@ public class DisplayJPanel extends javax.swing.JPanel {
             }
         });
         add(txtSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 180, -1));
+
+        btnBrowse.setText("Browse");
+        btnBrowse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBrowseActionPerformed(evt);
+            }
+        });
+        add(btnBrowse, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 580, -1, -1));
+        add(jDateChooseSD, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 430, 200, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtEmployeeIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmployeeIdActionPerformed
@@ -228,7 +241,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
           txtLevel.setText("");
           txtPhone.setText("");
           txtPositionTitle.setText("");
-          txtStartDate.setText("");
+          jDateChooseSD.setDate(null);
           txtTeamInfo.setText(""); 
           lblDisplayPhoto.setIcon(null);
 
@@ -260,7 +273,7 @@ public class DisplayJPanel extends javax.swing.JPanel {
           txtLevel.setText(selectedEntry.getLevel());
           txtPhone.setText(String.valueOf(selectedEntry.getPhone()));
           txtPositionTitle.setText(selectedEntry.getPositionTitle());
-          txtStartDate.setText(String.valueOf(selectedEntry.getStartDate()));
+          jDateChooseSD.setDate(selectedEntry.getStartDate());
           txtTeamInfo.setText(selectedEntry.getTeamInfo());
 
           
@@ -273,7 +286,39 @@ public class DisplayJPanel extends javax.swing.JPanel {
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
+        int selectedRowIndex = displayTable.getSelectedRow();
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a Record to update the employee details");
+            return;
+        }
+        DefaultTableModel model = (DefaultTableModel) displayTable.getModel();
+        EmployeeProfile selectedEntry = (EmployeeProfile) model.getValueAt(selectedRowIndex, 0);
+        selectedEntry.setEmployeeId(txtEmployeeId.getText());
+        selectedEntry.setName(txtEmployeeName.getText());
+        selectedEntry.setAge(Integer.parseInt(txtAge.getText()));
+        selectedEntry.setGender(txtGender.getText());
+        selectedEntry.setPhone(Long.parseLong(txtPhone.getText()));
+        selectedEntry.setEmail(txtEmail.getText());
+        selectedEntry.setStartDate(jDateChooseSD.getDate());
+        selectedEntry.setLevel(txtLevel.getText());
+        selectedEntry.setTeamInfo(txtTeamInfo.getText());
+        selectedEntry.setPositionTitle(txtPositionTitle.getText());
+        selectedEntry.setPhoto(photo_Path);
+  
+        populateDataToTable();
         
+        //once deleted all the fiels in view model will be deleted
+          txtEmployeeId.setText("");
+          txtAge.setText("");
+          txtEmail.setText("");
+          txtEmployeeName.setText("");
+          txtGender.setText("");
+          txtLevel.setText("");
+          txtPhone.setText("");
+          txtPositionTitle.setText("");
+          jDateChooseSD.setDate(null);
+          txtTeamInfo.setText(""); 
+          lblDisplayPhoto.setIcon(null);
         
 
 
@@ -292,26 +337,54 @@ public class DisplayJPanel extends javax.swing.JPanel {
             tr.setRowFilter(RowFilter.regexFilter(search));
     }//GEN-LAST:event_txtSearchKeyReleased
 
+    private void btnBrowseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBrowseActionPerformed
+        // TODO add your handling code here:
+        JFileChooser browseImageFile = new JFileChooser();
+        //Filter image extensions
+        FileNameExtensionFilter fnef = new FileNameExtensionFilter("IMAGES", "png", "jpg", "jpeg");
+        browseImageFile.addChoosableFileFilter(fnef);
+        int showOpenDialogue = browseImageFile.showOpenDialog(null);
+         
+        if (showOpenDialogue == JFileChooser.APPROVE_OPTION)
+        {
+            File selectedImageFile = browseImageFile.getSelectedFile();
+            String selectedImagePath = selectedImageFile.getAbsolutePath();
+            JOptionPane.showMessageDialog(null, selectedImagePath);
+            //Display image on jlable
+            photo_Path = selectedImagePath;
+//            history.setPhoto(selectedImagePath);
+            
+            ImageIcon ii = new ImageIcon(selectedImagePath);
+            //Resize image to fit jlabel
+            Image image = ii.getImage().getScaledInstance(lblDisplayPhoto.getWidth(), lblDisplayPhoto.getHeight(), Image.SCALE_SMOOTH);
+            lblDisplayPhoto.setIcon(new ImageIcon(image));
+        }                
+        
+        
+    }//GEN-LAST:event_btnBrowseActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBrowse;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton btnview;
     private javax.swing.JTable displayTable;
+    private com.toedter.calendar.JDateChooser jDateChooseSD;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblDisplayPhoto;
+    private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblEmployeeId;
+    private javax.swing.JLabel lblEmployeeName;
+    private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblLevel;
+    private javax.swing.JLabel lblPhone;
+    private javax.swing.JLabel lblPositionTitle;
     private javax.swing.JLabel lblSearch;
+    private javax.swing.JLabel lblStartDate;
+    private javax.swing.JLabel lblTeamInfo;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtEmployeeId;
@@ -321,7 +394,6 @@ public class DisplayJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtPhone;
     private javax.swing.JTextField txtPositionTitle;
     private javax.swing.JTextField txtSearch;
-    private javax.swing.JTextField txtStartDate;
     private javax.swing.JTextField txtTeamInfo;
     // End of variables declaration//GEN-END:variables
 
