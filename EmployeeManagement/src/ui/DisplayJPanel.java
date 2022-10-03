@@ -186,6 +186,11 @@ public class DisplayJPanel extends javax.swing.JPanel {
         lblSearch.setText("Search");
         add(lblSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 67, 50, 30));
 
+        txtSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSearchActionPerformed(evt);
+            }
+        });
         txtSearch.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtSearchKeyReleased(evt);
@@ -362,6 +367,10 @@ public class DisplayJPanel extends javax.swing.JPanel {
         
         
     }//GEN-LAST:event_btnBrowseActionPerformed
+
+    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSearchActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
