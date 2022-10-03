@@ -12,10 +12,10 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import model.EmployeeProfileHistory;
+import employeemodel.EmployeeProfileHistory;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
-import model.EmployeeProfile;
+import employeemodel.EmployeeProfile;
 
 /**
  *

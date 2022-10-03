@@ -13,8 +13,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import model.EmployeeProfile;
-import model.EmployeeProfileHistory;
+import employeemodel.EmployeeProfile;
+import employeemodel.EmployeeProfileHistory;
 
 /**
  *

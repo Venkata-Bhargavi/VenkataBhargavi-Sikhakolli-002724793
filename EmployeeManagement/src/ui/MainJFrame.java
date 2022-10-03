@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ui;
-import model.EmployeeProfileHistory;
+import employeemodel.EmployeeProfileHistory;
 /**
  *
  * @author bhargavi
