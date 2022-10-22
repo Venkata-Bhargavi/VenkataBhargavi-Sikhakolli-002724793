@@ -26,34 +26,81 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jToolBar1 = new javax.swing.JToolBar();
+        splitPane = new javax.swing.JSplitPane();
+        controlPanel = new javax.swing.JPanel();
+        addPersonBtn = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        workArea = new javax.swing.JPanel();
+
+        jToolBar1.setRollover(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Medical Resource");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        splitPane.setPreferredSize(new java.awt.Dimension(600, 23));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(119, 119, 119)
-                .addComponent(jLabel1)
-                .addContainerGap(376, Short.MAX_VALUE))
+        controlPanel.setMinimumSize(new java.awt.Dimension(200, 600));
+
+        addPersonBtn.setText("Add Person");
+        addPersonBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPersonBtnActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("jButton2");
+
+        javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
+        controlPanel.setLayout(controlPanelLayout);
+        controlPanelLayout.setHorizontalGroup(
+            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(addPersonBtn)
+                    .addComponent(jButton2))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel1)
-                .addContainerGap(551, Short.MAX_VALUE))
+
+        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addPersonBtn, jButton2});
+
+        controlPanelLayout.setVerticalGroup(
+            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlPanelLayout.createSequentialGroup()
+                .addGap(224, 224, 224)
+                .addComponent(addPersonBtn)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2)
+                .addContainerGap(312, Short.MAX_VALUE))
         );
+
+        splitPane.setLeftComponent(controlPanel);
+
+        javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
+        workArea.setLayout(workAreaLayout);
+        workAreaLayout.setHorizontalGroup(
+            workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 495, Short.MAX_VALUE)
+        );
+        workAreaLayout.setVerticalGroup(
+            workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+
+        splitPane.setRightComponent(workArea);
+
+        getContentPane().add(splitPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void addPersonBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPersonBtnActionPerformed
+        // TODO add your handling code here:
+        
+        AddPerson person = new AddPerson();
+        splitPane.setRightComponent(person);
+    }//GEN-LAST:event_addPersonBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -91,6 +138,11 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton addPersonBtn;
+    private javax.swing.JPanel controlPanel;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JSplitPane splitPane;
+    private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables
 }
