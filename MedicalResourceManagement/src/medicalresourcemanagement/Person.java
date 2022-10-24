@@ -10,7 +10,7 @@ package medicalresourcemanagement;
  */
 public class Person extends House{
     private String name;
-    private String age;
+    private int age;
     private long phone;
     private String userName;
     private String password;
@@ -23,11 +23,11 @@ public class Person extends House{
         this.name = name;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
