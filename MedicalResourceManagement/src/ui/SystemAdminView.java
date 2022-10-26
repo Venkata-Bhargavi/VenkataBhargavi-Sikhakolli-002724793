@@ -4,6 +4,8 @@
  */
 package ui;
 
+import medicalresourcemanagement.Hospital;
+import medicalresourcemanagement.HospitalDirectory;
 import medicalresourcemanagement.Patient;
 import medicalresourcemanagement.PatientDirectory;
 
@@ -16,6 +18,9 @@ public class SystemAdminView extends javax.swing.JFrame {
 
     Patient patient;
     PatientDirectory patientHistory; // declaring a class with some variable which has data type of class
+    Hospital hospital;
+    HospitalDirectory hospitalHistory;
+    
     
 
     /**
@@ -24,7 +29,10 @@ public class SystemAdminView extends javax.swing.JFrame {
     public SystemAdminView() {
         initComponents();
         patient = new Patient();
-        patientHistory = new PatientDirectory(); // calling constructor which has ArrayList<Person> initialization  
+        patientHistory = new PatientDirectory(); // calling constructor which has ArrayList<Person> initialization 
+        hospital = new Hospital();
+        hospitalHistory = new HospitalDirectory();
+        
         
 
     }
@@ -50,15 +58,15 @@ public class SystemAdminView extends javax.swing.JFrame {
         jToolBar1.setRollover(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setPreferredSize(new java.awt.Dimension(1700, 700));
 
-        splitPane.setPreferredSize(new java.awt.Dimension(1000, 700));
+        splitPane.setPreferredSize(new java.awt.Dimension(1500, 700));
 
         controlPanel.setBackground(new java.awt.Color(204, 204, 204));
         controlPanel.setMinimumSize(new java.awt.Dimension(200, 600));
         controlPanel.setPreferredSize(new java.awt.Dimension(100, 700));
 
-        addPersonBtn.setText("Patient");
+        addPersonBtn.setText("Manage Patient");
         addPersonBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addPersonBtnActionPerformed(evt);
@@ -74,7 +82,12 @@ public class SystemAdminView extends javax.swing.JFrame {
 
         Community.setText("Community");
 
-        jButton1.setText("Hospital");
+        jButton1.setText("Manage Hospital");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
         controlPanel.setLayout(controlPanelLayout);
@@ -87,7 +100,7 @@ public class SystemAdminView extends javax.swing.JFrame {
                     .addComponent(Community, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1)
                     .addComponent(addPersonBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Community, addPersonBtn, jButton1, jButton2});
@@ -108,13 +121,13 @@ public class SystemAdminView extends javax.swing.JFrame {
 
         splitPane.setLeftComponent(controlPanel);
 
-        workArea.setPreferredSize(new java.awt.Dimension(800, 700));
+        workArea.setPreferredSize(new java.awt.Dimension(1400, 700));
 
         javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
         workArea.setLayout(workAreaLayout);
         workAreaLayout.setHorizontalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
+            .addGap(0, 1295, Short.MAX_VALUE)
         );
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,7 +136,16 @@ public class SystemAdminView extends javax.swing.JFrame {
 
         splitPane.setRightComponent(workArea);
 
-        getContentPane().add(splitPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 700));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -138,6 +160,12 @@ public class SystemAdminView extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        AddHospital addHospital = new AddHospital(hospitalHistory);
+        splitPane.setRightComponent(addHospital);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

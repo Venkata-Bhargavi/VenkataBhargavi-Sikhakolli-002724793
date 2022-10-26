@@ -9,7 +9,9 @@ package medicalresourcemanagement;
  * @author bhargavi
  */
 public class Hospital extends Community{
+    //ArrayList<Hospital>
     private String hospitalName;
+    private int hospitalId;
 
     public String getHospitalName() {
         return hospitalName;
@@ -18,6 +20,15 @@ public class Hospital extends Community{
     public void setHospitalName(String hospitalName) {
         this.hospitalName = hospitalName;
     }
+
+    public int getHospitalId() {
+        return hospitalId;
+    }
+
+    public void setHospitalId(int hospitalId) {
+        this.hospitalId = hospitalId;
+    }
+    
     
     
 }

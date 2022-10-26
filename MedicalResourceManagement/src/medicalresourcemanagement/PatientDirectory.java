@@ -35,7 +35,8 @@ public class PatientDirectory {
     public void deletePatient(Person p){
     patientHistory.remove(p);
 }
-
+    
+    
     
     
     
