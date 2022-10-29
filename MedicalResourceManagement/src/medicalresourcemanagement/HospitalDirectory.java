@@ -36,5 +36,8 @@ public class HospitalDirectory {
     public void deleteHospital(Hospital h){
     hospitalHistory.remove(h);
 }
+    public ArrayList<Hospital> gethospitalList(){
+        return hospitalHistory;
+    }
 
 }

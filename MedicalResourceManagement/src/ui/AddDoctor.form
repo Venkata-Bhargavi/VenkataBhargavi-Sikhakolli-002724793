@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[900, 700]"/>
@@ -21,29 +21,33 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="1" pref="1037" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTabbedPane1" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="0" pref="700" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <Component id="jTabbedPane1" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
       <Properties>
-        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[900, 700]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTabbedPane1MouseClicked"/>
-      </Events>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Container class="javax.swing.JPanel" name="jPanelAddDoctor">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[900, 700]"/>
@@ -51,8 +55,8 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Add Patient">
-                <Property name="tabTitle" type="java.lang.String" value="Add Patient"/>
+              <JTabbedPaneConstraints tabName="Add Doctor">
+                <Property name="tabTitle" type="java.lang.String" value="Add Doctor"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -60,25 +64,25 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="337" max="-2" attributes="0"/>
-                      <Component id="lblAddTitle" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="232" max="-2" attributes="0"/>
-                      <Component id="lblname" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="417" max="32767" attributes="0"/>
+                      <Component id="lblname1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="405" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblErrorPassword" min="-2" pref="173" max="-2" attributes="0"/>
-                          <Component id="lblErrorUserName" min="-2" pref="173" max="-2" attributes="0"/>
-                          <Component id="lblErrorCity" min="-2" pref="173" max="-2" attributes="0"/>
-                          <Component id="lblErrorHouseAddress" min="-2" pref="173" max="-2" attributes="0"/>
-                          <Component id="lblErrorPhone" min="-2" pref="173" max="-2" attributes="0"/>
-                          <Component id="lblErrorAge" min="-2" pref="173" max="-2" attributes="0"/>
-                          <Component id="lblErrorName" min="-2" pref="173" max="-2" attributes="0"/>
+                          <Component id="lblErrorPassword1" alignment="0" min="-2" pref="173" max="-2" attributes="0"/>
+                          <Component id="lblErrorUserName1" alignment="0" min="-2" pref="173" max="-2" attributes="0"/>
+                          <Component id="lblErrorCity1" alignment="0" min="-2" pref="173" max="-2" attributes="0"/>
+                          <Component id="lblErrorHouseAddress1" alignment="0" min="-2" pref="173" max="-2" attributes="0"/>
+                          <Component id="lblErrorPhone1" alignment="0" min="-2" pref="173" max="-2" attributes="0"/>
+                          <Component id="lblErrorAge1" alignment="0" min="-2" pref="173" max="-2" attributes="0"/>
+                          <Component id="lblErrorName1" alignment="0" min="-2" pref="173" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="337" max="-2" attributes="0"/>
+                      <Component id="lblAddTitle1" min="-2" pref="249" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
@@ -87,36 +91,36 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                          <Component id="lblphone" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblphone1" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                              <Component id="lblage" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblage1" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Component id="lblcommunity" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblcity" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblhouseaddress" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblusername" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblpassword" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblcommunity1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblcity1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblhouseaddress1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblusername1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblpassword1" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="144" pref="144" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtname" alignment="0" pref="232" max="32767" attributes="0"/>
-                                      <Component id="txtage" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtphone" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="cbcommunity" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtname1" alignment="0" pref="220" max="32767" attributes="0"/>
+                                      <Component id="txtage1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtphone1" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="cbcommunity1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="txthouseaddress" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtcity" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtusername" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtpassword" max="32767" attributes="0"/>
+                                      <Component id="txthouseaddress1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtcity1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtusername1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtpassword1" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
-                                  <Component id="btnadd" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnadd1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="382" max="-2" attributes="0"/>
@@ -128,69 +132,69 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                      <Component id="lblAddTitle" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblAddTitle1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblname" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblErrorName" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
+                          <Component id="lblname1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblErrorName1" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="lblErrorAge" min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="lblErrorAge1" min="-2" pref="17" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="lblErrorPhone" min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="lblErrorPhone1" min="-2" pref="17" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                      <Component id="lblErrorHouseAddress" min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="lblErrorHouseAddress1" min="-2" pref="17" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="lblErrorCity" min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="lblErrorCity1" min="-2" pref="17" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="lblErrorUserName" min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="lblErrorUserName1" min="-2" pref="17" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="lblErrorPassword" min="-2" pref="17" max="-2" attributes="0"/>
-                      <EmptySpace pref="239" max="32767" attributes="0"/>
+                      <Component id="lblErrorPassword1" min="-2" pref="17" max="-2" attributes="0"/>
+                      <EmptySpace pref="233" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="txtphone" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtphone1" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="txtname" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtname1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblage" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtage" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblage1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtage1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lblphone" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblphone1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblcommunity" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cbcommunity" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblcommunity1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbcommunity1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblhouseaddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txthouseaddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblhouseaddress1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txthouseaddress1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblcity" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtcity" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblcity1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtcity1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblusername" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtusername" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblusername1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtusername1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblpassword" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtpassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblpassword1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtpassword1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="35" max="32767" attributes="0"/>
-                          <Component id="btnadd" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnadd1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -198,78 +202,78 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lblname">
+            <Component class="javax.swing.JLabel" name="lblname1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Name :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblage">
+            <Component class="javax.swing.JLabel" name="lblage1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Age :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblphone">
+            <Component class="javax.swing.JLabel" name="lblphone1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Phone :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblcommunity">
+            <Component class="javax.swing.JLabel" name="lblcommunity1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Community :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblhouseaddress">
+            <Component class="javax.swing.JLabel" name="lblhouseaddress1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="House Address :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblcity">
+            <Component class="javax.swing.JLabel" name="lblcity1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="City :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblusername">
+            <Component class="javax.swing.JLabel" name="lblusername1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="User Name :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblpassword">
+            <Component class="javax.swing.JLabel" name="lblpassword1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Password :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtage">
+            <Component class="javax.swing.JTextField" name="txtage1">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtageActionPerformed"/>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtageKeyReleased"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtage1ActionPerformed"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtage1KeyReleased"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtname">
+            <Component class="javax.swing.JTextField" name="txtname1">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtnameActionPerformed"/>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtnameKeyReleased"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtname1ActionPerformed"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtname1KeyReleased"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtphone">
+            <Component class="javax.swing.JTextField" name="txtphone1">
               <Events>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtphoneKeyReleased"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtphone1KeyReleased"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="txthouseaddress">
+            <Component class="javax.swing.JTextField" name="txthouseaddress1">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtcity">
+            <Component class="javax.swing.JTextField" name="txtcity1">
               <Events>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtcityKeyReleased"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtcity1KeyReleased"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtusername">
+            <Component class="javax.swing.JTextField" name="txtusername1">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtpassword">
+            <Component class="javax.swing.JTextField" name="txtpassword1">
               <Events>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtpasswordKeyReleased"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtpassword1KeyReleased"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JComboBox" name="cbcommunity">
+            <Component class="javax.swing.JComboBox" name="cbcommunity1">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="5">
@@ -282,63 +286,68 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbcommunityActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbcommunity1ActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnadd">
+            <Component class="javax.swing.JButton" name="btnadd1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnaddActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnadd1ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblAddTitle">
+            <Component class="javax.swing.JLabel" name="lblAddTitle1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Add Patient"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Helvetica Neue" size="18" style="1"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Add Doctor"/>
+                <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblErrorName">
+            <Component class="javax.swing.JLabel" name="lblErrorName1">
               <Events>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorNameKeyReleased"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorName1KeyReleased"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblErrorAge">
+            <Component class="javax.swing.JLabel" name="lblErrorAge1">
               <Events>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorAgeKeyReleased"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorAge1KeyReleased"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblErrorPhone">
+            <Component class="javax.swing.JLabel" name="lblErrorPhone1">
               <Events>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorPhoneKeyReleased"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorPhone1KeyReleased"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblErrorHouseAddress">
+            <Component class="javax.swing.JLabel" name="lblErrorHouseAddress1">
               <Events>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorHouseAddressKeyReleased"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorHouseAddress1KeyReleased"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblErrorCity">
+            <Component class="javax.swing.JLabel" name="lblErrorCity1">
               <Events>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorCityKeyReleased"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorCity1KeyReleased"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblErrorUserName">
+            <Component class="javax.swing.JLabel" name="lblErrorUserName1">
               <Events>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorUserNameKeyReleased"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorUserName1KeyReleased"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblErrorPassword">
+            <Component class="javax.swing.JLabel" name="lblErrorPassword1">
               <Events>
-                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorPasswordKeyReleased"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblErrorPassword1KeyReleased"/>
               </Events>
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Container class="javax.swing.JPanel" name="jPanelManageDoctor">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[900, 700]"/>
@@ -346,8 +355,8 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Manage Patient">
-                <Property name="tabTitle" type="java.lang.String" value="Manage Patient"/>
+              <JTabbedPaneConstraints tabName="Manage Doctor">
+                <Property name="tabTitle" type="java.lang.String" value="Manage Doctor"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -355,6 +364,78 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="spperson" min="-2" pref="989" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="348" pref="348" max="-2" attributes="0"/>
+                              <Component id="btnupdate" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="416" max="-2" attributes="0"/>
+                              <Component id="lbltitle" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="246" max="-2" attributes="0"/>
+                                          <Component id="lblage2" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                          <Component id="lblname2" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="246" pref="246" max="-2" attributes="0"/>
+                                      <Component id="lblphone2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="216" pref="216" max="-2" attributes="0"/>
+                                      <Component id="lblcommunity2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="192" pref="192" max="-2" attributes="0"/>
+                                      <Component id="lblhouseaddress2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="259" pref="259" max="-2" attributes="0"/>
+                                      <Component id="lblcity2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="217" pref="217" max="-2" attributes="0"/>
+                                      <Component id="lblusername2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="224" pref="224" max="-2" attributes="0"/>
+                                      <Component id="lblpassword2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtpassword2" min="-2" pref="196" max="-2" attributes="0"/>
+                                  <Component id="txtusername2" min="-2" pref="196" max="-2" attributes="0"/>
+                                  <Component id="txtcity2" min="-2" pref="196" max="-2" attributes="0"/>
+                                  <Component id="txthouseaddress2" min="-2" pref="196" max="-2" attributes="0"/>
+                                  <Component id="cbcommunity2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtphone2" min="-2" pref="196" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="txtname2" min="-2" pref="196" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
+                                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                      <Component id="btndelete" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="txtage2" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="6" max="32767" attributes="0"/>
+                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="99" max="-2" attributes="0"/>
@@ -366,82 +447,11 @@
                       <Component id="jTextField2" min="-2" pref="98" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                              <Component id="spperson" min="-2" pref="989" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="348" pref="348" max="-2" attributes="0"/>
-                              <Component id="btnupdate" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="416" max="-2" attributes="0"/>
-                              <Component id="lbltitle" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="lblcommunity1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblphone1" min="-2" max="-2" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <Component id="btnManageEncounter" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-                                              <Component id="lblname1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="lblage1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
-                                      <Component id="lblhouseaddress1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="283" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                              <Component id="lblcity1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="lblusername1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                              <Component id="lblpassword1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtpassword1" min="-2" pref="196" max="-2" attributes="0"/>
-                                  <Component id="txthouseaddress1" min="-2" pref="196" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="txtname1" min="-2" pref="196" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
-                                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                      <Component id="btndelete" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="txtage1" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="cbcommunity1" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtphone1" alignment="0" pref="196" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="txtcity1" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
-                                  <Component id="txtusername1" alignment="0" min="-2" pref="196" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Component id="lbltitle" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
@@ -457,68 +467,55 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btndelete" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btndelete" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblname1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtname1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnManageEncounter" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblname2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtname2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblage1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtage1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblage2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtage2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblphone1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtphone1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblphone2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtphone2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="cbcommunity1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="txthouseaddress1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="lblcommunity1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lblhouseaddress1" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblcommunity2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbcommunity2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-                              <Component id="lblcity1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="txtcity1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblhouseaddress2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txthouseaddress2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-                              <Component id="lblusername1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="txtusername1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblcity2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtcity2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-                              <Component id="lblpassword1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="txtpassword1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblusername2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtusername2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblpassword2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtpassword2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="btnupdate" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -538,7 +535,7 @@
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="9" rowCount="4">
-                        <Column editable="false" title="Patient Id" type="java.lang.Object"/>
+                        <Column editable="false" title="Doctor Id" type="java.lang.Object"/>
                         <Column editable="false" title="Name" type="java.lang.Object"/>
                         <Column editable="false" title="Age" type="java.lang.Object"/>
                         <Column editable="false" title="Phone" type="java.lang.Object"/>
@@ -608,7 +605,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="lblname1">
+            <Component class="javax.swing.JLabel" name="lblname2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Name :"/>
               </Properties>
@@ -618,62 +615,62 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="18" style="3"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Manage Patient"/>
+                <Property name="text" type="java.lang.String" value="Manage Doctor"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblage1">
+            <Component class="javax.swing.JLabel" name="lblage2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Age :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblphone1">
+            <Component class="javax.swing.JLabel" name="lblphone2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Phone :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblcommunity1">
+            <Component class="javax.swing.JLabel" name="lblcommunity2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Community :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblhouseaddress1">
+            <Component class="javax.swing.JLabel" name="lblhouseaddress2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="House Address :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblcity1">
+            <Component class="javax.swing.JLabel" name="lblcity2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="City :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblusername1">
+            <Component class="javax.swing.JLabel" name="lblusername2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="User Name :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblpassword1">
+            <Component class="javax.swing.JLabel" name="lblpassword2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Password :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtage1">
+            <Component class="javax.swing.JTextField" name="txtage2">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtage1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtage2ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtname1">
+            <Component class="javax.swing.JTextField" name="txtname2">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtphone1">
+            <Component class="javax.swing.JTextField" name="txtphone2">
             </Component>
-            <Component class="javax.swing.JTextField" name="txthouseaddress1">
+            <Component class="javax.swing.JTextField" name="txthouseaddress2">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtcity1">
+            <Component class="javax.swing.JTextField" name="txtcity2">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtusername1">
+            <Component class="javax.swing.JTextField" name="txtusername2">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtpassword1">
+            <Component class="javax.swing.JTextField" name="txtpassword2">
             </Component>
-            <Component class="javax.swing.JComboBox" name="cbcommunity1">
+            <Component class="javax.swing.JComboBox" name="cbcommunity2">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="6">
@@ -686,9 +683,6 @@
                   </StringArray>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbcommunity1ActionPerformed"/>
-              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
@@ -730,14 +724,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField2">
-            </Component>
-            <Component class="javax.swing.JButton" name="btnManageEncounter">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Manage Encounter"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageEncounterActionPerformed"/>
-              </Events>
             </Component>
           </SubComponents>
         </Container>

@@ -36,6 +36,20 @@ public class PatientDirectory {
     patientHistory.remove(p);
 }
     
+    public Patient searchPatient(int patientid)
+    {
+        for (Patient encounterPatient : patientHistory)
+        {
+            if (encounterPatient.getPatientId() == patientid)
+            {
+                return encounterPatient;
+            }
+        }
+        return null;
+    }
+    
+   
+    
     
     
     

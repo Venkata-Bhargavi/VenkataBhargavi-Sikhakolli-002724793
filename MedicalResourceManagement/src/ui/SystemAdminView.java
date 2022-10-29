@@ -4,10 +4,16 @@
  */
 package ui;
 
+import java.awt.CardLayout;
+import medicalresourcemanagement.Doctor;
+import medicalresourcemanagement.DoctorDirectory;
+import medicalresourcemanagement.Encounter;
+import medicalresourcemanagement.EncounterHistory;
 import medicalresourcemanagement.Hospital;
 import medicalresourcemanagement.HospitalDirectory;
 import medicalresourcemanagement.Patient;
 import medicalresourcemanagement.PatientDirectory;
+
 
 
 /**
@@ -18,20 +24,35 @@ public class SystemAdminView extends javax.swing.JFrame {
 
     Patient patient;
     PatientDirectory patientHistory; // declaring a class with some variable which has data type of class
+    
     Hospital hospital;
     HospitalDirectory hospitalHistory;
+    
+    Doctor doctor;
+    DoctorDirectory doctorHistory;
+    
+    Encounter encounter;
+    EncounterHistory encounterHistory;
+//    JPanel workArea;
+    
+    
+//    Encounter encounter;
     
     
 
     /**
      * Creates new form MainJFrame
      */
-    public SystemAdminView() {
+    public SystemAdminView(PatientDirectory patientHistory,Patient patient,DoctorDirectory doctorHistory,EncounterHistory encounterHistory,HospitalDirectory hospitalHistory) {
         initComponents();
-        patient = new Patient();
-        patientHistory = new PatientDirectory(); // calling constructor which has ArrayList<Person> initialization 
-        hospital = new Hospital();
-        hospitalHistory = new HospitalDirectory();
+        
+//        encounter = new Encounter();
+        this.patientHistory = patientHistory;
+        this.doctorHistory = doctorHistory;
+        this.encounterHistory = encounterHistory;
+        this.hospitalHistory = hospitalHistory;
+        this.patient = patient;
+//        this.workArea = workArea;
         
         
 
@@ -53,12 +74,12 @@ public class SystemAdminView extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         Community = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        btnManageEncounter = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
 
         jToolBar1.setRollover(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1700, 700));
 
         splitPane.setPreferredSize(new java.awt.Dimension(1500, 700));
 
@@ -89,6 +110,13 @@ public class SystemAdminView extends javax.swing.JFrame {
             }
         });
 
+        btnManageEncounter.setText("Manage Encounter");
+        btnManageEncounter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageEncounterActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
         controlPanel.setLayout(controlPanelLayout);
         controlPanelLayout.setHorizontalGroup(
@@ -96,11 +124,12 @@ public class SystemAdminView extends javax.swing.JFrame {
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Community, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1)
-                    .addComponent(addPersonBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(66, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(addPersonBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnManageEncounter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Community, addPersonBtn, jButton1, jButton2});
@@ -116,7 +145,9 @@ public class SystemAdminView extends javax.swing.JFrame {
                 .addComponent(Community)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(330, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnManageEncounter)
+                .addContainerGap(289, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlPanel);
@@ -152,8 +183,18 @@ public class SystemAdminView extends javax.swing.JFrame {
 
     private void addPersonBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPersonBtnActionPerformed
         // TODO add your handling code here:
-        AddPatient addPerson = new AddPatient(patientHistory);
+        AddPatient addPerson = new AddPatient(workArea,patient,patientHistory,encounterHistory);
         splitPane.setRightComponent(addPerson);
+//        workArea.add("AddPatient", addPerson);
+//         CardLayout cardlayout = (CardLayout) workArea.getLayout();
+//        cardlayout.next(workArea);
+
+        
+        
+//        SearchPersonJPanel searchPersonPanel = new SearchPersonJPanel(WorkArea, person, personlist, patientlist, encounterHistory);
+//        WorkArea.add("SearchPersonJPanel", searchPersonPanel);
+//        CardLayout cardlayout = (CardLayout) WorkArea.getLayout();
+//        cardlayout.next(WorkArea);
        
     }//GEN-LAST:event_addPersonBtnActionPerformed
 
@@ -167,45 +208,54 @@ public class SystemAdminView extends javax.swing.JFrame {
         splitPane.setRightComponent(addHospital);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SystemAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SystemAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SystemAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SystemAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
+    private void btnManageEncounterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEncounterActionPerformed
+        // TODO add your handling code here:
+        
+        manageEncounterjPanel mejp = new manageEncounterjPanel(workArea,patientHistory,patient,encounterHistory);
+        splitPane.setRightComponent(mejp);
+        
+    }//GEN-LAST:event_btnManageEncounterActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SystemAdminView().setVisible(true);
-            }
-        });
-    }
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(SystemAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(SystemAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(SystemAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(SystemAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new SystemAdminView(Patient patientHistory,DoctorDirectory doctorHistory,EncounterHistory encounterHistory,HospitalDirectory hospitalHistory).setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Community;
     private javax.swing.JButton addPersonBtn;
+    private javax.swing.JButton btnManageEncounter;
     private javax.swing.JPanel controlPanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

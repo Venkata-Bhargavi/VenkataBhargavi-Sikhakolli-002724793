@@ -5,18 +5,62 @@
 package ui;
 
 import javax.swing.JOptionPane;
+import medicalresourcemanagement.Community;
+import medicalresourcemanagement.CommunityDirectory;
+import medicalresourcemanagement.Doctor;
+import medicalresourcemanagement.DoctorDirectory;
+import medicalresourcemanagement.Encounter;
+import medicalresourcemanagement.EncounterHistory;
+import medicalresourcemanagement.Hospital;
+import medicalresourcemanagement.HospitalDirectory;
+import medicalresourcemanagement.Patient;
+import medicalresourcemanagement.PatientDirectory;
 
 /**
  *
  * @author bhargavi
  */
 public class MainJFrame extends javax.swing.JFrame {
+    Patient patient;
+    PatientDirectory patientHistory;
+    
+    Hospital hospital;
+    HospitalDirectory hospitalHistory;
+    
+    Encounter encounter;
+    EncounterHistory encounterHistory;
+    
+    Doctor doctor;
+    DoctorDirectory doctorHistory;
+    
+    Community community;
+    CommunityDirectory communityHistory;
+    
+    
+    
 
     /**
      * Creates new form MainJFrame
      */
     public MainJFrame() {
         initComponents();
+        patient = new Patient();
+        patientHistory = new PatientDirectory(); // calling constructor which has ArrayList<Person> initialization 
+        
+        hospital = new Hospital();
+        hospitalHistory = new HospitalDirectory();
+        
+        encounter = new Encounter();
+        encounterHistory = new EncounterHistory();
+        
+        doctor = new Doctor();
+        doctorHistory = new DoctorDirectory();
+        
+        community = new Community();
+        communityHistory = new CommunityDirectory();
+        
+        
+        
     }
 
     /**
@@ -138,9 +182,14 @@ public class MainJFrame extends javax.swing.JFrame {
         
         if(user.equals("System Admin") && !userName.equals("") && !password.equals("")){
               this.setVisible(false);
-            SystemAdminView sav = new SystemAdminView();
+            SystemAdminView sav = new SystemAdminView(patientHistory,patient,doctorHistory,encounterHistory,hospitalHistory);
             sav.setVisible(true);
             
+        }
+        if(user.equals("Community Admin") && !userName.equals("") && !password.equals("")){
+            this.setVisible(false);
+            CommunityAdminView sav = new CommunityAdminView(patientHistory,patient,doctorHistory,encounterHistory,hospitalHistory);
+
         }
         else {
             JOptionPane.showMessageDialog(this, "Enter Valid Credentials");
