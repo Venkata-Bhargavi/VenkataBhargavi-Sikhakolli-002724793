@@ -8,7 +8,7 @@ package medicalresourcemanagement;
  *
  * @author bhargavi
  */
-public class Person extends House{
+public class Person extends City{
     private String name;
     private int age;
     private long phone;

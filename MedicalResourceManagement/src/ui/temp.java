@@ -4,24 +4,33 @@
  */
 package ui;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import medicalresourcemanagement.City;
+import medicalresourcemanagement.CityDirectory;
 import medicalresourcemanagement.Community;
 import medicalresourcemanagement.CommunityDirectory;
+import medicalresourcemanagement.House;
 
 /**
  *
  * @author bhargavi
  */
-public class CommunityAdminView extends javax.swing.JFrame {
+public class temp extends javax.swing.JFrame {
 
     public String checkError;
+    City city;
+    CityDirectory cityHistory;
     Community community;
     CommunityDirectory communityHistory;
     /**
      * Creates new form CommunityAdminView
      */
-    public CommunityAdminView() {
+    public temp(CityDirectory cityHistory , CommunityDirectory communityHistory) {
         initComponents();
+        this.city = new City();
+        this.cityHistory = cityHistory;
+        this.communityHistory = communityHistory;
         
     }
 
@@ -246,81 +255,121 @@ public class CommunityAdminView extends javax.swing.JFrame {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-        if(checkError != null /*|| (txtname.getText() == null  || txtphone.getText() == null || txthouseaddress.getText() == null || txtcity.getText() ==null || txtusername.getText() == null ||txtpassword.getText() == null)*/){
-            JOptionPane.showMessageDialog(this,"Please provide valid inputs to all fields");
+//        if(checkError != null /*|| (txtname.getText() == null  || txtphone.getText() == null || txthouseaddress.getText() == null || txtcity.getText() ==null || txtusername.getText() == null ||txtpassword.getText() == null)*/){
+//            JOptionPane.showMessageDialog(this,"Please provide valid inputs to all fields");
+//
+//        }
+//        else{
+//            String city = txtCity.getText();
+//            String community = txtCommunity.getText();
+//            String house = txtHouse.getText();
+//            
+//
+//            Community com = communityHistory.addNewCommunity(); // 
+//
+//            // sets value to ArrayList from the fields that the data is entered.
+//
+//            com.setCity(city);
+//            
+//            com.setCommunityName(community);
+//            com.setHouse(house);
+//           
+//
+//            // shows a dialogue message when the data clicked save button
+//            JOptionPane.showMessageDialog(this,"Employee details added");
+//
+//            // empties all the fields after saving the entered data to ArrayList to facilitate new entries.
+//            txtname.setText("");
+//            txtage.setText("");
+//            txtphone.setText("");
+//            cbcommunity.setSelectedIndex(-1);
+//            txthouseaddress.setText("");
+//            txtcity.setText("");
+//            txtusername.setText("");
+//            txtpassword.setText("");
+//            populateDataToTable();
+//
+//        }
 
-        }
-        else{
             String city = txtCity.getText();
             String community = txtCommunity.getText();
             String house = txtHouse.getText();
             
+            
+            City cit = cityHistory.addNewCity(); // 
+            cit.setCity(city);
+            cit.setCommunityName(community);
+//            cit.addHousetoHouseList(house);
+            cit.setHouse(house);
+            
+            
 
-            Community com = communityHisory.addNewPatient(); // 
+            
+            
+            
+//            for(City c :cityHistory.getCityHistory()){
+//                if(c.getCity().equals(city)){
+//                    if(c.getCommunityList().contains(community)){
+//                        
+//                       ArrayList<House> m =  c.getHouseList();
+//                       House h = new House();
+//                       c.getCommunityList().addNewHouse(h.setHouse(house)));
+//                    }
+//                }
+//            }
+      
 
-            // sets value to ArrayList from the fields that the data is entered.
-
-            per.setName(name);
-            per.setAge(age);
-            per.setPhone(phone);
-            per.setCommunityName(community);
-            per.setHouse(homeAddress);
-            per.setCity(city);
-            per.setUserName(userName);
-            per.setPassword(password);
-
-            // shows a dialogue message when the data clicked save button
-            JOptionPane.showMessageDialog(this,"Employee details added");
-
-            // empties all the fields after saving the entered data to ArrayList to facilitate new entries.
-            txtname.setText("");
-            txtage.setText("");
-            txtphone.setText("");
-            cbcommunity.setSelectedIndex(-1);
-            txthouseaddress.setText("");
-            txtcity.setText("");
-            txtusername.setText("");
-            txtpassword.setText("");
-            populateDataToTable();
-
-        }
+//            for(City selectedCity :cityHistory.getCityHistory())
+//            {
+//                if(selectedCity.getCity().equals(city)){
+//                    Community newCommunity = new Community();
+//                    newCommunity.setCommunityName(community);
+//                    ArrayList<Community> selectedCommunity= selectedCity.getCommunityList();
+//                    City(selectedCommunity);
+//
+////                  selectedCommunity.addNewCommunity(newCommunity);
+//                }
+//            }
+            // check if city is present in city history
+            
         
+//        
     }//GEN-LAST:event_btnAddActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CommunityAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CommunityAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CommunityAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CommunityAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CommunityAdminView().setVisible(true);
-            }
-        });
-    }
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(CommunityAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(CommunityAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(CommunityAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(CommunityAdminView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new CommunityAdminView().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;

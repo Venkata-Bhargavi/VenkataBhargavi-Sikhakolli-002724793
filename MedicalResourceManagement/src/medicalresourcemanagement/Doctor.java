@@ -8,7 +8,7 @@ package medicalresourcemanagement;
  *
  * @author bhargavi
  */
-public class Doctor extends Person {
+public class Doctor{
      private int DoctorId;
     private static int count = 0;
 

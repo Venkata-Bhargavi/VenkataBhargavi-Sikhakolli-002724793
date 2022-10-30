@@ -75,7 +75,6 @@ public class AddPatient extends javax.swing.JPanel {
         txtname = new javax.swing.JTextField();
         txtphone = new javax.swing.JTextField();
         txthouseaddress = new javax.swing.JTextField();
-        txtcity = new javax.swing.JTextField();
         txtusername = new javax.swing.JTextField();
         txtpassword = new javax.swing.JTextField();
         cbcommunity = new javax.swing.JComboBox<>();
@@ -88,6 +87,7 @@ public class AddPatient extends javax.swing.JPanel {
         lblErrorCity = new javax.swing.JLabel();
         lblErrorUserName = new javax.swing.JLabel();
         lblErrorPassword = new javax.swing.JLabel();
+        btnCity = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         spperson = new javax.swing.JScrollPane();
         tblperson = new javax.swing.JTable();
@@ -172,12 +172,6 @@ public class AddPatient extends javax.swing.JPanel {
             }
         });
 
-        txtcity.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtcityKeyReleased(evt);
-            }
-        });
-
         txtpassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtpasswordKeyReleased(evt);
@@ -242,6 +236,8 @@ public class AddPatient extends javax.swing.JPanel {
             }
         });
 
+        btnCity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -251,9 +247,15 @@ public class AddPatient extends javax.swing.JPanel {
                 .addComponent(lblAddTitle)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(232, 232, 232)
-                .addComponent(lblname)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 417, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(232, 232, 232)
+                        .addComponent(lblname)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 405, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCity, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblErrorPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblErrorUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -288,7 +290,6 @@ public class AddPatient extends javax.swing.JPanel {
                                     .addComponent(cbcommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(0, 0, Short.MAX_VALUE))
                                 .addComponent(txthouseaddress)
-                                .addComponent(txtcity)
                                 .addComponent(txtusername)
                                 .addComponent(txtpassword)))
                         .addGroup(jPanel1Layout.createSequentialGroup()
@@ -311,13 +312,19 @@ public class AddPatient extends javax.swing.JPanel {
                 .addComponent(lblErrorPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52)
                 .addComponent(lblErrorHouseAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblErrorCity, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(lblErrorCity, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)))
                 .addComponent(lblErrorUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblErrorPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(239, Short.MAX_VALUE))
+                .addContainerGap(235, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(183, 183, 183)
@@ -340,9 +347,7 @@ public class AddPatient extends javax.swing.JPanel {
                         .addComponent(lblhouseaddress)
                         .addComponent(txthouseaddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblcity)
-                        .addComponent(txtcity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblcity)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lblusername)
@@ -351,7 +356,7 @@ public class AddPatient extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lblpassword)
                         .addComponent(txtpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                     .addComponent(btnadd)
                     .addGap(184, 184, 184)))
         );
@@ -619,7 +624,7 @@ public class AddPatient extends javax.swing.JPanel {
             long phone = Long.parseLong(txtphone.getText());
             String community = cbcommunity.getSelectedItem().toString();
             String homeAddress = txthouseaddress.getText();
-            String city = txtcity.getText();
+            String city = btnCity.getSelectedItem().toString();
             String userName = txtusername.getText();
             String password = txtpassword.getText();
 
@@ -796,24 +801,6 @@ public class AddPatient extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_txtphoneKeyReleased
 
-    private void txtcityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcityKeyReleased
-        // TODO add your handling code here:
-        String PATTERN = "^[a-zA-Z '/:]+$"; // regex that matches the input
-        Pattern pattern = Pattern.compile(PATTERN);
-        Matcher match = pattern.matcher(txtcity.getText()); // gets text from field and matched against the regex
-     
-        if(!match.matches())
-        {
-            checkError = "error";
-            lblErrorCity.setText("Enter a valid City name."); //throws message if input other than text is entered
-        }
-        else
-        {
-            checkError = null;
-            lblErrorCity.setText(null);
-        }
-    }//GEN-LAST:event_txtcityKeyReleased
-
     private void txtpasswordKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpasswordKeyReleased
         // TODO add your handling code here:
           String PATTERN = "^(?=.*[0-9])"
@@ -924,6 +911,7 @@ public class AddPatient extends javax.swing.JPanel {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> btnCity;
     private javax.swing.JButton btnManageEncounter;
     private javax.swing.JButton btnadd;
     private javax.swing.JButton btndelete;
@@ -967,7 +955,6 @@ public class AddPatient extends javax.swing.JPanel {
     private javax.swing.JTable tblperson;
     private javax.swing.JTextField txtage;
     private javax.swing.JTextField txtage1;
-    private javax.swing.JTextField txtcity;
     private javax.swing.JTextField txtcity1;
     private javax.swing.JTextField txthouseaddress;
     private javax.swing.JTextField txthouseaddress1;

@@ -8,16 +8,17 @@ package medicalresourcemanagement;
  *
  * @author bhargavi
  */
-public class House extends Community {
-    private String house;
+public class House {
+    private String houseAddress;
 
-    public String getHouse() {
-        return house;
+    public String getHouseAddress() {
+        return houseAddress;
     }
 
-    public void setHouse(String house) {
-        this.house = house;
+    public void setHouseAddress(String houseAddress) {
+        this.houseAddress = houseAddress;
     }
+
     
     
     

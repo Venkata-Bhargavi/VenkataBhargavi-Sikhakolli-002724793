@@ -5,36 +5,64 @@
 package medicalresourcemanagement;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
 public class CommunityDirectory {
-        private ArrayList<Community> communityHistory; // declaration
-
-    public ArrayList<Community> getCommunityHistory() {
-        return communityHistory;
-    }
-
-    public void setCommunityHistory(ArrayList<Community> communityHistory) {
-        this.communityHistory = communityHistory;
-    }
+    
+    ArrayList<Community> communityHistory;
     
     public CommunityDirectory(){
         this.communityHistory = new ArrayList<Community>();
     }
-    
-    
-       public Community addNewCommunity(){
-        Community d = new Community(); // object p stores the  address of  a new object of a class
-        communityHistory.add(d);  // stores the address ref into array list
-        return d; // returns address 
-    }
-    public void deleteCommunity(Community d){
-    communityHistory.remove(d);
-}
-        
-        
 
+    public ArrayList<Community> getCommunitylist() {
+        return communityHistory;
+    }
+
+    public void setCommunitylist(ArrayList<Community> communitylist) {
+        this.communityHistory = communitylist;
+    }
+    
+    public void addNewCommunity(String commName){
+        Community comm = new Community();
+        comm.setCommunityName(commName);
+        communityHistory.add(comm);
+    }
+    
+    public void deleteCommunity(Community h){
+    communityHistory.remove(h);
+    }
+    
+    
+    public Community searchCommunity(String comm){
+        for(Community com: communityHistory){
+            if(com.getCommunityName().equals(comm)){
+                return com;
+            }
+        }
+        return null;
+    }
+    
+    public boolean isCommunityExist(String comm){
+        for(Community com: communityHistory){
+            if(com.getCommunityName().equals(comm)){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+//    public Set fetchUniqueCommunities(){
+//
+//        for(Community comm: communitylist){
+//            unique_communities.add(comm.getCommunityName());
+//        }
+//        return unique_communities;
+//    }
+    
 }

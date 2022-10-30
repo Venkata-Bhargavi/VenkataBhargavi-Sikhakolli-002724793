@@ -46,7 +46,6 @@ public class AddHospital extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtCity = new javax.swing.JTextField();
         txtHospitalName = new javax.swing.JTextField();
         cbCommunity = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
@@ -55,6 +54,7 @@ public class AddHospital extends javax.swing.JPanel {
         btnView = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
+        cbCity = new javax.swing.JComboBox<>();
 
         setPreferredSize(new java.awt.Dimension(900, 700));
 
@@ -82,12 +82,6 @@ public class AddHospital extends javax.swing.JPanel {
         jLabel3.setText("City :");
 
         jLabel4.setText("Hospital Id :");
-
-        txtCity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCityActionPerformed(evt);
-            }
-        });
 
         txtHospitalName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,22 +149,23 @@ public class AddHospital extends javax.swing.JPanel {
                         .addGap(227, 227, 227)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
-                                .addGap(93, 93, 93)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtHospitalName, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cbCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtHospitalId, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGap(123, 123, 123)
                                 .addComponent(btnSave)
                                 .addGap(61, 61, 61)
-                                .addComponent(btnUpdate)))))
+                                .addComponent(btnUpdate))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(93, 93, 93)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtHospitalName, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtHospitalId, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(cbCity, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(cbCommunity, javax.swing.GroupLayout.Alignment.LEADING, 0, 147, Short.MAX_VALUE)))))))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -186,12 +181,12 @@ public class AddHospital extends javax.swing.JPanel {
                     .addComponent(jButton3))
                 .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(cbCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3)
+                    .addComponent(cbCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2)
+                    .addComponent(cbCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtHospitalName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -207,10 +202,6 @@ public class AddHospital extends javax.swing.JPanel {
                 .addContainerGap(172, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCityActionPerformed
 
     private void txtHospitalNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHospitalNameActionPerformed
         // TODO add your handling code here:
@@ -229,7 +220,7 @@ public class AddHospital extends javax.swing.JPanel {
         }
         else{
             String community = cbCommunity.getSelectedItem().toString();
-            String city = txtCity.getText();
+            String city = cbCity.getSelectedItem().toString();
             String hospitalName = txtHospitalName.getText();
             String hospitalId = String.valueOf(txtHospitalId.getText());
 
@@ -275,7 +266,7 @@ public class AddHospital extends javax.swing.JPanel {
           
         
         cbCommunity.setSelectedItem(hospitalHistory.getHospitalHistory().get(selectedRowIndex).getCommunityName());
-        txtCity.setText(hospitalHistory.getHospitalHistory().get(selectedRowIndex).getCity());
+//        txtCity.setText(hospitalHistory.getHospitalHistory().get(selectedRowIndex).getCity());
         txtHospitalName.setText(hospitalHistory.getHospitalHistory().get(selectedRowIndex).getHospitalName());
         txtHospitalId.setText(String.valueOf(hospitalHistory.getHospitalHistory().get(selectedRowIndex).getHospitalId()));
         
@@ -303,7 +294,7 @@ public class AddHospital extends javax.swing.JPanel {
 //        selectedEntry.setAge(Integer.parseInt(txtage1.getText()));
 //        selectedEntry.setPhone(Long.parseLong(txtphone1.getText()));
 
-            selectedEntry.setCity(txtCity.getText());
+//            selectedEntry.setCity(txtCity.getText());
         selectedEntry.setCommunityName(cbCommunity.getSelectedItem().toString());
         selectedEntry.setHospitalName(txtHospitalName.getText());
         selectedEntry.setHospitalId(Integer.parseInt(txtHospitalId.getText()));
@@ -347,6 +338,7 @@ public class AddHospital extends javax.swing.JPanel {
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton btnView;
+    private javax.swing.JComboBox<String> cbCity;
     private javax.swing.JComboBox<String> cbCommunity;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
@@ -356,7 +348,6 @@ public class AddHospital extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblHptl;
-    private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtHospitalId;
     private javax.swing.JTextField txtHospitalName;
     // End of variables declaration//GEN-END:variables
@@ -374,7 +365,7 @@ public class AddHospital extends javax.swing.JPanel {
         // row is array of objects with 9 menbers. (1 for each column)
         Object[] row =  new Object[5];
         row[0] = p.getCommunityName(); 
-        row[1] = p.getCity();
+//        row[1] = p.getCity();
         row[2] = p.getHospitalName();
         row[3] = p.getHospitalId();
         

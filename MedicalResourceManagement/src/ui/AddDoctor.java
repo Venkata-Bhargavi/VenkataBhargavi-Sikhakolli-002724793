@@ -45,298 +45,47 @@ public class AddDoctor extends javax.swing.JPanel {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanelAddDoctor = new javax.swing.JPanel();
-        lblname1 = new javax.swing.JLabel();
-        lblage1 = new javax.swing.JLabel();
-        lblphone1 = new javax.swing.JLabel();
-        lblcommunity1 = new javax.swing.JLabel();
-        lblhouseaddress1 = new javax.swing.JLabel();
-        lblcity1 = new javax.swing.JLabel();
-        lblusername1 = new javax.swing.JLabel();
-        lblpassword1 = new javax.swing.JLabel();
-        txtage1 = new javax.swing.JTextField();
-        txtname1 = new javax.swing.JTextField();
-        txtphone1 = new javax.swing.JTextField();
-        txthouseaddress1 = new javax.swing.JTextField();
-        txtcity1 = new javax.swing.JTextField();
-        txtusername1 = new javax.swing.JTextField();
-        txtpassword1 = new javax.swing.JTextField();
-        cbcommunity1 = new javax.swing.JComboBox<>();
-        btnadd1 = new javax.swing.JButton();
-        lblAddTitle1 = new javax.swing.JLabel();
-        lblErrorName1 = new javax.swing.JLabel();
-        lblErrorAge1 = new javax.swing.JLabel();
-        lblErrorPhone1 = new javax.swing.JLabel();
-        lblErrorHouseAddress1 = new javax.swing.JLabel();
-        lblErrorCity1 = new javax.swing.JLabel();
-        lblErrorUserName1 = new javax.swing.JLabel();
-        lblErrorPassword1 = new javax.swing.JLabel();
         jPanelManageDoctor = new javax.swing.JPanel();
         spperson = new javax.swing.JScrollPane();
         tblperson = new javax.swing.JTable();
-        lblname2 = new javax.swing.JLabel();
         lbltitle = new javax.swing.JLabel();
-        lblage2 = new javax.swing.JLabel();
-        lblphone2 = new javax.swing.JLabel();
         lblcommunity2 = new javax.swing.JLabel();
         lblhouseaddress2 = new javax.swing.JLabel();
         lblcity2 = new javax.swing.JLabel();
         lblusername2 = new javax.swing.JLabel();
         lblpassword2 = new javax.swing.JLabel();
-        txtage2 = new javax.swing.JTextField();
-        txtname2 = new javax.swing.JTextField();
-        txtphone2 = new javax.swing.JTextField();
         txthouseaddress2 = new javax.swing.JTextField();
-        txtcity2 = new javax.swing.JTextField();
         txtusername2 = new javax.swing.JTextField();
         txtpassword2 = new javax.swing.JTextField();
         cbcommunity2 = new javax.swing.JComboBox<>();
         btnupdate = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnViewAndUpdate = new javax.swing.JButton();
         btndelete = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
+        cbCity = new javax.swing.JComboBox<>();
+        jPanelAddDoctor = new javax.swing.JPanel();
+        lblcommunity1 = new javax.swing.JLabel();
+        lblhouseaddress1 = new javax.swing.JLabel();
+        lblcity1 = new javax.swing.JLabel();
+        lblusername1 = new javax.swing.JLabel();
+        lblpassword1 = new javax.swing.JLabel();
+        txthouseaddress1 = new javax.swing.JTextField();
+        txtusername1 = new javax.swing.JTextField();
+        txtpassword1 = new javax.swing.JTextField();
+        cbcommunity1 = new javax.swing.JComboBox<>();
+        btnadd1 = new javax.swing.JButton();
+        lblAddTitle1 = new javax.swing.JLabel();
+        lblErrorHouseAddress1 = new javax.swing.JLabel();
+        lblErrorUserName1 = new javax.swing.JLabel();
+        lblErrorPassword1 = new javax.swing.JLabel();
+        cbCity1 = new javax.swing.JComboBox<>();
 
         setPreferredSize(new java.awt.Dimension(900, 700));
 
         jTabbedPane1.setPreferredSize(new java.awt.Dimension(900, 700));
-
-        jPanelAddDoctor.setPreferredSize(new java.awt.Dimension(900, 700));
-
-        lblname1.setText("Name :");
-
-        lblage1.setText("Age :");
-
-        lblphone1.setText("Phone :");
-
-        lblcommunity1.setText("Community :");
-
-        lblhouseaddress1.setText("House Address :");
-
-        lblcity1.setText("City :");
-
-        lblusername1.setText("User Name :");
-
-        lblpassword1.setText("Password :");
-
-        txtage1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtage1ActionPerformed(evt);
-            }
-        });
-        txtage1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtage1KeyReleased(evt);
-            }
-        });
-
-        txtname1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtname1ActionPerformed(evt);
-            }
-        });
-        txtname1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtname1KeyReleased(evt);
-            }
-        });
-
-        txtphone1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtphone1KeyReleased(evt);
-            }
-        });
-
-        txtcity1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtcity1KeyReleased(evt);
-            }
-        });
-
-        txtpassword1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtpassword1KeyReleased(evt);
-            }
-        });
-
-        cbcommunity1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Brigham", "Huntington Avenue", "Mission Hill", "Brookline", "Fenway" }));
-        cbcommunity1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbcommunity1ActionPerformed(evt);
-            }
-        });
-
-        btnadd1.setText("Add");
-        btnadd1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnadd1ActionPerformed(evt);
-            }
-        });
-
-        lblAddTitle1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        lblAddTitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblAddTitle1.setText("Add Doctor");
-        lblAddTitle1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        lblErrorName1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                lblErrorName1KeyReleased(evt);
-            }
-        });
-
-        lblErrorAge1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                lblErrorAge1KeyReleased(evt);
-            }
-        });
-
-        lblErrorPhone1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                lblErrorPhone1KeyReleased(evt);
-            }
-        });
-
-        lblErrorHouseAddress1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                lblErrorHouseAddress1KeyReleased(evt);
-            }
-        });
-
-        lblErrorCity1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                lblErrorCity1KeyReleased(evt);
-            }
-        });
-
-        lblErrorUserName1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                lblErrorUserName1KeyReleased(evt);
-            }
-        });
-
-        lblErrorPassword1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                lblErrorPassword1KeyReleased(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanelAddDoctorLayout = new javax.swing.GroupLayout(jPanelAddDoctor);
-        jPanelAddDoctor.setLayout(jPanelAddDoctorLayout);
-        jPanelAddDoctorLayout.setHorizontalGroup(
-            jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAddDoctorLayout.createSequentialGroup()
-                .addGap(232, 232, 232)
-                .addComponent(lblname1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 405, Short.MAX_VALUE)
-                .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblErrorPassword1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrorUserName1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrorCity1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrorHouseAddress1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrorPhone1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrorAge1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrorName1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(173, 173, 173))
-            .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
-                .addGap(337, 337, 337)
-                .addComponent(lblAddTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
-                    .addGap(181, 181, 181)
-                    .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
-                            .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblphone1)
-                                    .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
-                                        .addGap(12, 12, 12)
-                                        .addComponent(lblage1)))
-                                .addComponent(lblcommunity1)
-                                .addComponent(lblcity1)
-                                .addComponent(lblhouseaddress1)
-                                .addComponent(lblusername1)
-                                .addComponent(lblpassword1))
-                            .addGap(144, 144, 144)
-                            .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtname1, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                                .addComponent(txtage1)
-                                .addComponent(txtphone1)
-                                .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
-                                    .addComponent(cbcommunity1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addComponent(txthouseaddress1)
-                                .addComponent(txtcity1)
-                                .addComponent(txtusername1)
-                                .addComponent(txtpassword1)))
-                        .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
-                            .addGap(156, 156, 156)
-                            .addComponent(btnadd1)))
-                    .addGap(382, 382, 382)))
-        );
-        jPanelAddDoctorLayout.setVerticalGroup(
-            jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(lblAddTitle1)
-                .addGap(111, 111, 111)
-                .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblname1)
-                    .addComponent(lblErrorName1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(lblErrorAge1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblErrorPhone1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52)
-                .addComponent(lblErrorHouseAddress1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblErrorCity1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblErrorUserName1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblErrorPassword1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(233, Short.MAX_VALUE))
-            .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
-                    .addGap(183, 183, 183)
-                    .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(txtphone1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
-                            .addComponent(txtname1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblage1)
-                                .addComponent(txtage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(lblphone1)))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblcommunity1)
-                        .addComponent(cbcommunity1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblhouseaddress1)
-                        .addComponent(txthouseaddress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblcity1)
-                        .addComponent(txtcity1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblusername1)
-                        .addComponent(txtusername1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblpassword1)
-                        .addComponent(txtpassword1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                    .addComponent(btnadd1)
-                    .addGap(184, 184, 184)))
-        );
-
-        jTabbedPane1.addTab("Add Doctor", jPanelAddDoctor);
 
         jPanelManageDoctor.setPreferredSize(new java.awt.Dimension(900, 700));
 
@@ -344,20 +93,20 @@ public class AddDoctor extends javax.swing.JPanel {
 
         tblperson.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Doctor Id", "Name", "Age", "Phone", "Community", "House Address", "City", "Username", "Password"
+                "Doctor Id", "Community", "House Address", "City", "Username", "Password"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, false, false, false, true
+                false, true, false, false, false, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -371,30 +120,18 @@ public class AddDoctor extends javax.swing.JPanel {
         tblperson.setPreferredSize(new java.awt.Dimension(900, 80));
         spperson.setViewportView(tblperson);
 
-        lblname2.setText("Name :");
-
         lbltitle.setFont(new java.awt.Font("Helvetica Neue", 3, 18)); // NOI18N
         lbltitle.setText("Manage Doctor");
 
-        lblage2.setText("Age :");
-
-        lblphone2.setText("Phone :");
-
         lblcommunity2.setText("Community :");
 
-        lblhouseaddress2.setText("House Address :");
+        lblhouseaddress2.setText("Hospital Name:");
 
         lblcity2.setText("City :");
 
         lblusername2.setText("User Name :");
 
         lblpassword2.setText("Password :");
-
-        txtage2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtage2ActionPerformed(evt);
-            }
-        });
 
         cbcommunity2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Community", "Brigham", "Huntington Avenue", "Mission Hill", "Brookline", "Fenway" }));
 
@@ -405,10 +142,10 @@ public class AddDoctor extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setText("View & Update");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnViewAndUpdate.setText("View & Update");
+        btnViewAndUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnViewAndUpdateActionPerformed(evt);
             }
         });
 
@@ -422,6 +159,8 @@ public class AddDoctor extends javax.swing.JPanel {
         jLabel1.setText("Search by Id");
 
         jLabel2.setText("Search by Name");
+
+        cbCity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanelManageDoctorLayout = new javax.swing.GroupLayout(jPanelManageDoctor);
         jPanelManageDoctor.setLayout(jPanelManageDoctorLayout);
@@ -440,25 +179,6 @@ public class AddDoctor extends javax.swing.JPanel {
                         .addComponent(lbltitle))
                     .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
                         .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
-                                    .addGap(246, 246, 246)
-                                    .addComponent(lblage2))
-                                .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
-                                    .addGap(46, 46, 46)
-                                    .addComponent(lblname2)))
-                            .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
-                                .addGap(246, 246, 246)
-                                .addComponent(lblphone2))
-                            .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
-                                .addGap(216, 216, 216)
-                                .addComponent(lblcommunity2))
-                            .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
-                                .addGap(192, 192, 192)
-                                .addComponent(lblhouseaddress2))
-                            .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
-                                .addGap(259, 259, 259)
-                                .addComponent(lblcity2))
                             .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
                                 .addGap(217, 217, 217)
                                 .addComponent(lblusername2))
@@ -469,17 +189,28 @@ public class AddDoctor extends javax.swing.JPanel {
                         .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtpassword2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtusername2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtcity2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txthouseaddress2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbcommunity2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtphone2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
-                                .addComponent(txtname2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(194, 194, 194)
-                                .addComponent(jButton1)
+                                .addGap(390, 390, 390)
+                                .addComponent(btnViewAndUpdate)
                                 .addGap(18, 18, 18)
-                                .addComponent(btndelete))
-                            .addComponent(txtage2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(btndelete))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelManageDoctorLayout.createSequentialGroup()
+                        .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(lblcommunity2))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelManageDoctorLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblcity2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblhouseaddress2, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(132, 132, 132)
+                        .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbCity, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txthouseaddress2, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                                .addComponent(cbcommunity2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(401, 401, 401)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
@@ -506,26 +237,14 @@ public class AddDoctor extends javax.swing.JPanel {
                 .addGap(25, 25, 25)
                 .addComponent(spperson, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
+                .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnViewAndUpdate)
+                    .addComponent(btndelete))
+                .addGap(77, 77, 77)
                 .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
-                        .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addComponent(btndelete))
-                        .addGap(51, 51, 51))
-                    .addGroup(jPanelManageDoctorLayout.createSequentialGroup()
-                        .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblname2)
-                            .addComponent(txtname2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblage2)
-                            .addComponent(txtage2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(6, 6, 6)))
-                .addGap(3, 3, 3)
-                .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblphone2)
-                    .addComponent(txtphone2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
+                    .addComponent(lblcity2)
+                    .addComponent(cbCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblcommunity2)
                     .addComponent(cbcommunity2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -533,11 +252,7 @@ public class AddDoctor extends javax.swing.JPanel {
                 .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblhouseaddress2)
                     .addComponent(txthouseaddress2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblcity2)
-                    .addComponent(txtcity2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
+                .addGap(18, 18, 18)
                 .addGroup(jPanelManageDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblusername2)
                     .addComponent(txtusername2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -551,14 +266,157 @@ public class AddDoctor extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("Manage Doctor", jPanelManageDoctor);
 
+        jPanelAddDoctor.setPreferredSize(new java.awt.Dimension(900, 700));
+
+        lblcommunity1.setText("Community :");
+
+        lblhouseaddress1.setText("House Address :");
+
+        lblcity1.setText("City :");
+
+        lblusername1.setText("User Name :");
+
+        lblpassword1.setText("Password :");
+
+        txtpassword1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtpassword1KeyReleased(evt);
+            }
+        });
+
+        cbcommunity1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Brigham", "Huntington Avenue", "Mission Hill", "Brookline", "Fenway" }));
+        cbcommunity1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbcommunity1ActionPerformed(evt);
+            }
+        });
+
+        btnadd1.setText("Add");
+        btnadd1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnadd1ActionPerformed(evt);
+            }
+        });
+
+        lblAddTitle1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblAddTitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAddTitle1.setText("Add Doctor");
+        lblAddTitle1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        lblErrorHouseAddress1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                lblErrorHouseAddress1KeyReleased(evt);
+            }
+        });
+
+        lblErrorUserName1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                lblErrorUserName1KeyReleased(evt);
+            }
+        });
+
+        lblErrorPassword1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                lblErrorPassword1KeyReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelAddDoctorLayout = new javax.swing.GroupLayout(jPanelAddDoctor);
+        jPanelAddDoctor.setLayout(jPanelAddDoctorLayout);
+        jPanelAddDoctorLayout.setHorizontalGroup(
+            jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
+                .addGap(337, 337, 337)
+                .addComponent(lblAddTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
+                .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
+                        .addGap(178, 178, 178)
+                        .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblpassword1)
+                            .addComponent(lblcity1)
+                            .addComponent(lblhouseaddress1)
+                            .addComponent(lblcommunity1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
+                        .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cbcommunity1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txthouseaddress1, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
+                            .addComponent(txtpassword1, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+                            .addComponent(cbCity1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtusername1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(84, 84, 84)
+                .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblErrorPassword1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblErrorUserName1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblErrorHouseAddress1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(173, 173, 173))
+            .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
+                    .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
+                            .addGap(206, 206, 206)
+                            .addComponent(lblusername1))
+                        .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
+                            .addGap(337, 337, 337)
+                            .addComponent(btnadd1)))
+                    .addGap(616, 616, 616)))
+        );
+
+        jPanelAddDoctorLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cbcommunity1, txthouseaddress1, txtpassword1, txtusername1});
+
+        jPanelAddDoctorLayout.setVerticalGroup(
+            jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(lblAddTitle1)
+                .addGap(169, 169, 169)
+                .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblcity1)
+                    .addComponent(cbCity1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(lblErrorHouseAddress1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cbcommunity1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblcommunity1))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblhouseaddress1)
+                            .addComponent(txthouseaddress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAddDoctorLayout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addComponent(txtusername1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(lblErrorUserName1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblpassword1)
+                    .addComponent(txtpassword1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblErrorPassword1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(195, Short.MAX_VALUE))
+            .addGroup(jPanelAddDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelAddDoctorLayout.createSequentialGroup()
+                    .addGap(375, 375, 375)
+                    .addComponent(lblusername1)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                    .addComponent(btnadd1)
+                    .addGap(184, 184, 184)))
+        );
+
+        jTabbedPane1.addTab("Add Doctor", jPanelAddDoctor);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(22, 22, 22))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1025, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -568,83 +426,126 @@ public class AddDoctor extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtage1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtage1ActionPerformed
+    private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtage1ActionPerformed
+        int selectedRowIndex = tblperson.getSelectedRow();  // gives index of selected rows
+        if(selectedRowIndex < 0)
+        {
+            JOptionPane.showMessageDialog(this, "Select a entry to delete");
+            return;
+        }
 
-    private void txtage1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtage1KeyReleased
+        DefaultTableModel model = (DefaultTableModel)tblperson.getModel();
+        Doctor selectedEntry = doctorHistory.getDoctorHistory().get(selectedRowIndex);
+        doctorHistory.deleteDoctor(selectedEntry);
+
+        JOptionPane.showMessageDialog(this, "Selected Employee Deleted");
+        populateDataToTable(); //  deletes record from table and updates all entries
+    }//GEN-LAST:event_btndeleteActionPerformed
+
+    private void btnViewAndUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAndUpdateActionPerformed
         // TODO add your handling code here:
-        String PATTERN = "^[0-9 +()-]{1,3}$";  // pattern to check against input
-        Pattern pattern = Pattern.compile(PATTERN);
-        Matcher match = pattern.matcher(txtage1.getText());
-        if(!match.matches())
-        {
-            checkError = "error";
-            lblErrorAge1.setText("Enter Valid Age"); // throws error message
-        }
-        else
-        {
-            checkError = null;
-            lblErrorAge1.setText(null);
-        }
-    }//GEN-LAST:event_txtage1KeyReleased
 
-    private void txtname1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtname1ActionPerformed
+        int selectedRowIndex = tblperson.getSelectedRow();  // gives index of selected rows
+        if(selectedRowIndex < 0)
+        {
+            JOptionPane.showMessageDialog(this, "Select a entry to view");
+            return;
+        }
+
+        txthouseaddress1.setText(doctorHistory.getDoctorHistory().get(selectedRowIndex).getHouse());
+        cbcommunity1.setSelectedItem(doctorHistory.getDoctorHistory().get(selectedRowIndex).getCommunityName());
+        cbCity.setText(doctorHistory.getDoctorHistory().get(selectedRowIndex).getCityName());
+        txtusername1.setText(doctorHistory.getDoctorHistory().get(selectedRowIndex).getUserName());
+        txtpassword1.setText(doctorHistory.getDoctorHistory().get(selectedRowIndex).getPassword());
+    }//GEN-LAST:event_btnViewAndUpdateActionPerformed
+
+    private void btnupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnupdateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtname1ActionPerformed
 
-    private void txtname1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtname1KeyReleased
+        int selectedRowIndex = tblperson.getSelectedRow();
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a Record to update the employee details");
+            return;
+        }
+
+        DefaultTableModel model = (DefaultTableModel) tblperson.getModel();
+        Doctor selectedEntry = doctorHistory.getDoctorHistory().get(selectedRowIndex);
+
+        //Patient selectedEntry = (Patient) model.getValueAt(selectedRowIndex, 1);
+        //        selectedEntry.setEmployeeId(txtEmployeeId.getText());
+        
+        selectedEntry.setHouseAddress(txthouseaddress1.getText());
+        selectedEntry.setCity(txtcity1.getText());
+        selectedEntry.setUserName(txtusername1.getText());
+        selectedEntry.setPassword(txtpassword1.getText());
+
+        populateDataToTable();
+
+        //once deleted all the fiels in view model will be deleted
+        
+        txthouseaddress1.setText("");
+        txtcity1.setText("");
+        cbcommunity1.setSelectedItem(-1);
+        txtusername1.setText("");
+        txtpassword1.setText("");
+    }//GEN-LAST:event_btnupdateActionPerformed
+
+    private void lblErrorPassword1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblErrorPassword1KeyReleased
         // TODO add your handling code here:
-        String PATTERN = "^[a-zA-Z '/:]+$"; // regex that matches the input
-        Pattern pattern = Pattern.compile(PATTERN);
-        Matcher match = pattern.matcher(txtname1.getText()); // gets text from field and matched against the regex
+    }//GEN-LAST:event_lblErrorPassword1KeyReleased
 
-        if(!match.matches())
-        {
-            checkError = "error";
-            lblErrorName1.setText("Enter a valid Input."); //throws message if input other than text is entered
-        }
-        else
-        {
-            checkError = null;
-            lblErrorName1.setText(null);
-        }
-    }//GEN-LAST:event_txtname1KeyReleased
-
-    private void txtphone1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtphone1KeyReleased
+    private void lblErrorUserName1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblErrorUserName1KeyReleased
         // TODO add your handling code here:
-        String PATTERN = "^[0-9 +()-]{10}$";  // pattern to check against input
-        Pattern pattern = Pattern.compile(PATTERN);
-        Matcher match = pattern.matcher(txtphone1.getText());
-        if(!match.matches())
-        {
-            checkError = "error";
-            lblErrorPhone1.setText("Please Enter a 10 digit number."); // throws error message
-        }
-        else
-        {
-            checkError = null;
-            lblErrorPhone1.setText(null);
-        }
-    }//GEN-LAST:event_txtphone1KeyReleased
+    }//GEN-LAST:event_lblErrorUserName1KeyReleased
 
-    private void txtcity1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcity1KeyReleased
+    private void lblErrorHouseAddress1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblErrorHouseAddress1KeyReleased
         // TODO add your handling code here:
-        String PATTERN = "^[a-zA-Z '/:]+$"; // regex that matches the input
-        Pattern pattern = Pattern.compile(PATTERN);
-        Matcher match = pattern.matcher(txtcity1.getText()); // gets text from field and matched against the regex
+    }//GEN-LAST:event_lblErrorHouseAddress1KeyReleased
 
-        if(!match.matches())
-        {
-            checkError = "error";
-            lblErrorCity1.setText("Enter a valid City name."); //throws message if input other than text is entered
+    private void btnadd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnadd1ActionPerformed
+        // TODO add your handling code here:
+        if(checkError != null /*|| (txtname.getText() == null  || txtphone.getText() == null || txthouseaddress.getText() == null || txtcity.getText() ==null || txtusername.getText() == null ||txtpassword.getText() == null)*/){
+            JOptionPane.showMessageDialog(this,"Please provide valid inputs to all fields");
+
         }
-        else
-        {
-            checkError = null;
-            lblErrorCity1.setText(null);
+        else{
+            
+            String community = cbcommunity1.getSelectedItem().toString();
+            String homeAddress = txthouseaddress1.getText();
+            String city = cbCity1.getSelectedItem().toString();
+            String userName = txtusername1.getText();
+            String password = txtpassword1.getText();
+
+            Doctor doc = doctorHistory.addNewDoctor(); //
+
+            // sets value to ArrayList from the fields that the data is entered.
+
+            
+            doc.setCommunityName(community);
+            doc.setHouse(homeAddress);
+            doc.setCity(city);
+            doc.setUserName(userName);
+            doc.setPassword(password);
+
+            // shows a dialogue message when the data clicked save button
+            JOptionPane.showMessageDialog(this,"Employee details added");
+
+            // empties all the fields after saving the entered data to ArrayList to facilitate new entries.
+          
+            cbcommunity1.setSelectedIndex(-1);
+            txthouseaddress1.setText("");
+            cbCity1.setSelectedIndex(-1);
+            txtusername1.setText("");
+            txtpassword1.setText("");
+            populateDataToTable();
+
         }
-    }//GEN-LAST:event_txtcity1KeyReleased
+    }//GEN-LAST:event_btnadd1ActionPerformed
+
+    private void cbcommunity1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbcommunity1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbcommunity1ActionPerformed
 
     private void txtpassword1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpassword1KeyReleased
         // TODO add your handling code here:
@@ -667,188 +568,16 @@ public class AddDoctor extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_txtpassword1KeyReleased
 
-    private void cbcommunity1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbcommunity1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbcommunity1ActionPerformed
-
-    private void btnadd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnadd1ActionPerformed
-        // TODO add your handling code here:
-        if(checkError != null /*|| (txtname.getText() == null  || txtphone.getText() == null || txthouseaddress.getText() == null || txtcity.getText() ==null || txtusername.getText() == null ||txtpassword.getText() == null)*/){
-            JOptionPane.showMessageDialog(this,"Please provide valid inputs to all fields");
-
-        }
-        else{
-            String name = txtname1.getText();
-            int age = Integer.parseInt(txtage1.getText());
-            long phone = Long.parseLong(txtphone1.getText());
-            String community = cbcommunity1.getSelectedItem().toString();
-            String homeAddress = txthouseaddress1.getText();
-            String city = txtcity1.getText();
-            String userName = txtusername1.getText();
-            String password = txtpassword1.getText();
-
-            Doctor doc = doctorHistory.addNewDoctor(); //
-
-            // sets value to ArrayList from the fields that the data is entered.
-
-            doc.setName(name);
-            doc.setAge(age);
-            doc.setPhone(phone);
-            doc.setCommunityName(community);
-            doc.setHouse(homeAddress);
-            doc.setCity(city);
-            doc.setUserName(userName);
-            doc.setPassword(password);
-
-            // shows a dialogue message when the data clicked save button
-            JOptionPane.showMessageDialog(this,"Employee details added");
-
-            // empties all the fields after saving the entered data to ArrayList to facilitate new entries.
-            txtname1.setText("");
-            txtage1.setText("");
-            txtphone1.setText("");
-            cbcommunity1.setSelectedIndex(-1);
-            txthouseaddress1.setText("");
-            txtcity1.setText("");
-            txtusername1.setText("");
-            txtpassword1.setText("");
-            populateDataToTable();
-
-        }
-    }//GEN-LAST:event_btnadd1ActionPerformed
-
-    private void lblErrorName1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblErrorName1KeyReleased
-        // TODO add your handling code here:
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_lblErrorName1KeyReleased
-
-    private void lblErrorAge1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblErrorAge1KeyReleased
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_lblErrorAge1KeyReleased
-
-    private void lblErrorPhone1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblErrorPhone1KeyReleased
-        // TODO add your handling code here:
-        String PATTERN = "^[0-9 +()-]{10}$";  // pattern to check against input
-        Pattern pattern = Pattern.compile(PATTERN);
-        Matcher match = pattern.matcher(txtphone1.getText());
-        if(!match.matches())
-        {
-            checkError = "error";
-            lblErrorPhone1.setText("Please Enter a 10 digit number."); // throws error message
-        }
-        else
-        {
-            checkError = null;
-            lblErrorPhone1.setText(null);
-        }
-    }//GEN-LAST:event_lblErrorPhone1KeyReleased
-
-    private void lblErrorHouseAddress1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblErrorHouseAddress1KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblErrorHouseAddress1KeyReleased
-
-    private void lblErrorCity1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblErrorCity1KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblErrorCity1KeyReleased
-
-    private void lblErrorUserName1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblErrorUserName1KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblErrorUserName1KeyReleased
-
-    private void lblErrorPassword1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblErrorPassword1KeyReleased
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_lblErrorPassword1KeyReleased
-
-    private void txtage2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtage2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtage2ActionPerformed
-
-    private void btnupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnupdateActionPerformed
-        // TODO add your handling code here:
-
-        int selectedRowIndex = tblperson.getSelectedRow();
-        if (selectedRowIndex < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a Record to update the employee details");
-            return;
-        }
-
-        DefaultTableModel model = (DefaultTableModel) tblperson.getModel();
-        Doctor selectedEntry = doctorHistory.getDoctorHistory().get(selectedRowIndex);
-
-        //Patient selectedEntry = (Patient) model.getValueAt(selectedRowIndex, 1);
-        //        selectedEntry.setEmployeeId(txtEmployeeId.getText());
-        selectedEntry.setName(txtname1.getText());
-
-        selectedEntry.setAge(Integer.parseInt(txtage1.getText()));
-        selectedEntry.setPhone(Long.parseLong(txtphone1.getText()));
-        selectedEntry.setHouse(txthouseaddress1.getText());
-        selectedEntry.setCity(txtcity1.getText());
-        selectedEntry.setUserName(txtusername1.getText());
-        selectedEntry.setPassword(txtpassword1.getText());
-
-        populateDataToTable();
-
-        //once deleted all the fiels in view model will be deleted
-        txtname1.setText("");
-        txtage1.setText("");
-        txtphone1.setText("");
-        txthouseaddress1.setText("");
-        txtcity1.setText("");
-        cbcommunity1.setSelectedItem(-1);
-        txtusername1.setText("");
-        txtpassword1.setText("");
-    }//GEN-LAST:event_btnupdateActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-
-        int selectedRowIndex = tblperson.getSelectedRow();  // gives index of selected rows
-        if(selectedRowIndex < 0)
-        {
-            JOptionPane.showMessageDialog(this, "Select a entry to view");
-            return;
-        }
-
-        txtname1.setText(doctorHistory.getDoctorHistory().get(selectedRowIndex).getName());
-        txtage1.setText(String.valueOf(doctorHistory.getDoctorHistory().get(selectedRowIndex).getAge()));
-        txtphone1.setText(String.valueOf(doctorHistory.getDoctorHistory().get(selectedRowIndex).getPhone()));
-        txthouseaddress1.setText(doctorHistory.getDoctorHistory().get(selectedRowIndex).getHouse());
-        cbcommunity1.setSelectedItem(doctorHistory.getDoctorHistory().get(selectedRowIndex).getCommunityName());
-        txtcity1.setText(doctorHistory.getDoctorHistory().get(selectedRowIndex).getCity());
-        txtusername1.setText(doctorHistory.getDoctorHistory().get(selectedRowIndex).getUserName());
-        txtpassword1.setText(doctorHistory.getDoctorHistory().get(selectedRowIndex).getPassword());
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
-        // TODO add your handling code here:
-        int selectedRowIndex = tblperson.getSelectedRow();  // gives index of selected rows
-        if(selectedRowIndex < 0)
-        {
-            JOptionPane.showMessageDialog(this, "Select a entry to delete");
-            return;
-        }
-
-        DefaultTableModel model = (DefaultTableModel)tblperson.getModel();
-        Doctor selectedEntry = doctorHistory.getDoctorHistory().get(selectedRowIndex);
-        doctorHistory.deleteDoctor(selectedEntry);
-
-        JOptionPane.showMessageDialog(this, "Selected Employee Deleted");
-        populateDataToTable(); //  deletes record from table and updates all entries
-
-    }//GEN-LAST:event_btndeleteActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnViewAndUpdate;
     private javax.swing.JButton btnadd1;
     private javax.swing.JButton btndelete;
     private javax.swing.JButton btnupdate;
+    private javax.swing.JComboBox<String> cbCity;
+    private javax.swing.JComboBox<String> cbCity1;
     private javax.swing.JComboBox<String> cbcommunity1;
     private javax.swing.JComboBox<String> cbcommunity2;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanelAddDoctor;
@@ -857,44 +586,26 @@ public class AddDoctor extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel lblAddTitle1;
-    private javax.swing.JLabel lblErrorAge1;
-    private javax.swing.JLabel lblErrorCity1;
     private javax.swing.JLabel lblErrorHouseAddress1;
-    private javax.swing.JLabel lblErrorName1;
     private javax.swing.JLabel lblErrorPassword1;
-    private javax.swing.JLabel lblErrorPhone1;
     private javax.swing.JLabel lblErrorUserName1;
-    private javax.swing.JLabel lblage1;
-    private javax.swing.JLabel lblage2;
     private javax.swing.JLabel lblcity1;
     private javax.swing.JLabel lblcity2;
     private javax.swing.JLabel lblcommunity1;
     private javax.swing.JLabel lblcommunity2;
     private javax.swing.JLabel lblhouseaddress1;
     private javax.swing.JLabel lblhouseaddress2;
-    private javax.swing.JLabel lblname1;
-    private javax.swing.JLabel lblname2;
     private javax.swing.JLabel lblpassword1;
     private javax.swing.JLabel lblpassword2;
-    private javax.swing.JLabel lblphone1;
-    private javax.swing.JLabel lblphone2;
     private javax.swing.JLabel lbltitle;
     private javax.swing.JLabel lblusername1;
     private javax.swing.JLabel lblusername2;
     private javax.swing.JScrollPane spperson;
     private javax.swing.JTable tblperson;
-    private javax.swing.JTextField txtage1;
-    private javax.swing.JTextField txtage2;
-    private javax.swing.JTextField txtcity1;
-    private javax.swing.JTextField txtcity2;
     private javax.swing.JTextField txthouseaddress1;
     private javax.swing.JTextField txthouseaddress2;
-    private javax.swing.JTextField txtname1;
-    private javax.swing.JTextField txtname2;
     private javax.swing.JTextField txtpassword1;
     private javax.swing.JTextField txtpassword2;
-    private javax.swing.JTextField txtphone1;
-    private javax.swing.JTextField txtphone2;
     private javax.swing.JTextField txtusername1;
     private javax.swing.JTextField txtusername2;
     // End of variables declaration//GEN-END:variables
