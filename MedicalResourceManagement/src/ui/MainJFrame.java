@@ -5,6 +5,8 @@
 package ui;
 
 import javax.swing.JOptionPane;
+import medicalresourcemanagement.City;
+import medicalresourcemanagement.CityDirectory;
 import medicalresourcemanagement.Community;
 import medicalresourcemanagement.CommunityDirectory;
 import medicalresourcemanagement.Doctor;
@@ -13,28 +15,31 @@ import medicalresourcemanagement.Encounter;
 import medicalresourcemanagement.EncounterHistory;
 import medicalresourcemanagement.Hospital;
 import medicalresourcemanagement.HospitalDirectory;
-import medicalresourcemanagement.Patient;
-import medicalresourcemanagement.PatientDirectory;
+//import medicalresourcemanagement.Patient;
+//import medicalresourcemanagement.PatientDirectory;
 
 /**
  *
  * @author bhargavi
  */
 public class MainJFrame extends javax.swing.JFrame {
-    Patient patient;
-    PatientDirectory patientHistory;
-    
-    Hospital hospital;
-    HospitalDirectory hospitalHistory;
-    
-    Encounter encounter;
-    EncounterHistory encounterHistory;
-    
-    Doctor doctor;
-    DoctorDirectory doctorHistory;
+//    Patient patient;
+//    PatientDirectory patientHistory;
+//    
+//    Hospital hospital;
+//    HospitalDirectory hospitalHistory;
+//    
+//    Encounter encounter;
+//    EncounterHistory encounterHistory;
+//    
+//    Doctor doctor;
+//    DoctorDirectory doctorHistory;
     
     Community community;
     CommunityDirectory communityHistory;
+//    
+    City city;
+    CityDirectory cityHistory;
     
     
     
@@ -44,17 +49,19 @@ public class MainJFrame extends javax.swing.JFrame {
      */
     public MainJFrame() {
         initComponents();
-        patient = new Patient();
-        patientHistory = new PatientDirectory(); // calling constructor which has ArrayList<Person> initialization 
-        
-        hospital = new Hospital();
-        hospitalHistory = new HospitalDirectory();
-        
-        encounter = new Encounter();
-        encounterHistory = new EncounterHistory();
-        
-        doctor = new Doctor();
-        doctorHistory = new DoctorDirectory();
+//        patient = new Patient();
+//        patientHistory = new PatientDirectory(); // calling constructor which has ArrayList<Person> initialization 
+//        
+//        hospital = new Hospital();
+//        hospitalHistory = new HospitalDirectory();
+//        
+//        encounter = new Encounter();
+//        encounterHistory = new EncounterHistory();
+//        
+//        doctor = new Doctor();
+//        doctorHistory = new DoctorDirectory();
+        city = new City();
+        cityHistory = new CityDirectory();
         
         community = new Community();
         communityHistory = new CommunityDirectory();
@@ -179,16 +186,11 @@ public class MainJFrame extends javax.swing.JFrame {
         String user = cbUser.getSelectedItem().toString();
         String userName = txtUserName.getText();
         String password = pfPassword.getText();
-        
-        if(user.equals("System Admin") && !userName.equals("") && !password.equals("")){
-              this.setVisible(false);
-            SystemAdminView sav = new SystemAdminView(patientHistory,patient,doctorHistory,encounterHistory,hospitalHistory);
-            sav.setVisible(true);
-            
-        }
+  
         if(user.equals("Community Admin") && !userName.equals("") && !password.equals("")){
             this.setVisible(false);
-            CommunityAdminView sav = new CommunityAdminView(patientHistory,patient,doctorHistory,encounterHistory,hospitalHistory);
+            CommunityAdminPage sav = new CommunityAdminPage(cityHistory,communityHistory);
+            sav.setVisible(true);
 
         }
         else {
@@ -197,6 +199,13 @@ public class MainJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
+          
+//        if(user.equals("System Admin") && !userName.equals("") && !password.equals("")){
+//              this.setVisible(false);
+//            SystemAdminView sav = new SystemAdminView(patientHistory,patient,doctorHistory,encounterHistory,hospitalHistory);
+//            sav.setVisible(true);
+//            
+//        }
     /**
      * @param args the command line arguments
      */
