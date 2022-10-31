@@ -228,8 +228,8 @@ public class AddHospital extends javax.swing.JPanel {
 
             // sets value to ArrayList from the fields that the data is entered.
 
-            per.setCommunityName(community);
-            per.setCity(city);
+//            per.setCommunityName(community);
+//            per.setCity(city);
             per.setHospitalId(Integer.parseInt(hospitalId));
             per.setHospitalName(hospitalName);
                     
@@ -241,7 +241,7 @@ public class AddHospital extends javax.swing.JPanel {
             // empties all the fields after saving the entered data to ArrayList to facilitate new entries.
             
             cbCommunity.setSelectedIndex(-1);
-            txtCity.setText("");
+//            txtCity.setText("");
             txtHospitalName.setText("");
             txtHospitalId.setText("");
             populateDataToTable();
@@ -265,7 +265,7 @@ public class AddHospital extends javax.swing.JPanel {
 
           
         
-        cbCommunity.setSelectedItem(hospitalHistory.getHospitalHistory().get(selectedRowIndex).getCommunityName());
+//        cbCommunity.setSelectedItem(hospitalHistory.getHospitalHistory().get(selectedRowIndex).getCommunityName());
 //        txtCity.setText(hospitalHistory.getHospitalHistory().get(selectedRowIndex).getCity());
         txtHospitalName.setText(hospitalHistory.getHospitalHistory().get(selectedRowIndex).getHospitalName());
         txtHospitalId.setText(String.valueOf(hospitalHistory.getHospitalHistory().get(selectedRowIndex).getHospitalId()));
@@ -295,7 +295,7 @@ public class AddHospital extends javax.swing.JPanel {
 //        selectedEntry.setPhone(Long.parseLong(txtphone1.getText()));
 
 //            selectedEntry.setCity(txtCity.getText());
-        selectedEntry.setCommunityName(cbCommunity.getSelectedItem().toString());
+//        selectedEntry.setCommunityName(cbCommunity.getSelectedItem().toString());
         selectedEntry.setHospitalName(txtHospitalName.getText());
         selectedEntry.setHospitalId(Integer.parseInt(txtHospitalId.getText()));
         
@@ -305,7 +305,7 @@ public class AddHospital extends javax.swing.JPanel {
         populateDataToTable();
         
         //once deleted all the fiels in view model will be deleted
-          txtCity.setText("");
+//          txtCity.setText("");
           cbCommunity.setSelectedIndex(-1);
           txtHospitalName.setText("");
           txtHospitalId.setText("");
@@ -364,7 +364,7 @@ public class AddHospital extends javax.swing.JPanel {
         
         // row is array of objects with 9 menbers. (1 for each column)
         Object[] row =  new Object[5];
-        row[0] = p.getCommunityName(); 
+//        row[0] = p.getCommunityName(); 
 //        row[1] = p.getCity();
         row[2] = p.getHospitalName();
         row[3] = p.getHospitalId();

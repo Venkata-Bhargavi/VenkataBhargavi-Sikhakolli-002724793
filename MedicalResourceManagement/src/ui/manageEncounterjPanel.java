@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Krishnakanth Naik Jarapala
+ * @author bhargavi
  */
 public class manageEncounterjPanel extends javax.swing.JPanel {
 
@@ -397,8 +397,8 @@ public class manageEncounterjPanel extends javax.swing.JPanel {
                   
             encounter.setPatientID(patient.getPatientId());
             encounter.setPatient_name(patient.getName());
-            encounter.setCity(patient.getCity());
-            encounter.setCommunity(patient.getCommunityName());
+//            encounter.setCity(patient.getCity());
+//            encounter.setCommunity(patient.getCommunityName());
             encounter.setHospital_id(Integer.parseInt(txt5.getText()));
             encounter.setEncounter_time(LocalDateTime.now());
             encounter.setDoctor_id(Integer.parseInt(txt6.getText()));
@@ -455,8 +455,8 @@ public class manageEncounterjPanel extends javax.swing.JPanel {
             Object[] row = new Object[7];
             row[0] = patient.getPatientId();/*.getEncounter_id();*/
             row[1] = patient.getName()/*.getgetEncounter_time()*/;
-            row[2] = patient.getCommunityName()/*getPatientID()*/;
-            row[3] = patient.getCity()/*.getPatient_name()*/;
+//            row[2] = patient.getCommunityName()/*getPatientID()*/;
+//            row[3] = patient.getCity()/*.getPatient_name()*/;
 //            row[4] = patient.getBloodPressure();
 //            row[5] = patient.getTemperature();
 

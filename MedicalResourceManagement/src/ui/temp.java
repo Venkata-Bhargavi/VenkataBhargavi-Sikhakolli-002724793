@@ -296,11 +296,11 @@ public class temp extends javax.swing.JFrame {
             String house = txtHouse.getText();
             
             
-            City cit = cityHistory.addNewCity(); // 
-            cit.setCity(city);
-            cit.setCommunityName(community);
-//            cit.addHousetoHouseList(house);
-            cit.setHouse(house);
+//            City cit = cityHistory.addNewCity(); // 
+//            cit.setCity(city);
+//            cit.setCommunityName(community);
+////            cit.addHousetoHouseList(house);
+//            cit.setHouse(house);
             
             
 

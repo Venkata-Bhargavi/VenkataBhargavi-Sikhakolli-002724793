@@ -10,37 +10,37 @@ import java.util.Set;
 
 /**
  *
- * @author Krishnakanth Naik Jarapala
+ * @author bhargavi
  */
 public class CommunityDirectory {
     
-    ArrayList<Community> communityHistory;
+    ArrayList<Community> communitylist;
     
     public CommunityDirectory(){
-        this.communityHistory = new ArrayList<Community>();
+        this.communitylist = new ArrayList<Community>();
     }
 
     public ArrayList<Community> getCommunitylist() {
-        return communityHistory;
+        return communitylist;
     }
 
     public void setCommunitylist(ArrayList<Community> communitylist) {
-        this.communityHistory = communitylist;
+        this.communitylist = communitylist;
     }
     
     public void addNewCommunity(String commName){
         Community comm = new Community();
         comm.setCommunityName(commName);
-        communityHistory.add(comm);
+        communitylist.add(comm);
     }
     
     public void deleteCommunity(Community h){
-    communityHistory.remove(h);
+        communitylist.remove(h);
     }
     
     
     public Community searchCommunity(String comm){
-        for(Community com: communityHistory){
+        for(Community com: communitylist){
             if(com.getCommunityName().equals(comm)){
                 return com;
             }
@@ -49,13 +49,14 @@ public class CommunityDirectory {
     }
     
     public boolean isCommunityExist(String comm){
-        for(Community com: communityHistory){
+        for(Community com: communitylist){
             if(com.getCommunityName().equals(comm)){
                 return true;
             }
         }
         return false;
     }
+    
     
 //    public Set fetchUniqueCommunities(){
 //

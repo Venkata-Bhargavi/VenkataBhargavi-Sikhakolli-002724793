@@ -13,8 +13,8 @@ import javax.swing.table.DefaultTableModel;
 import medicalresourcemanagement.HospitalDirectory;
 import medicalresourcemanagement.Hospital;
 import medicalresourcemanagement.House;
-import medicalresourcemanagement.Patient;
-import medicalresourcemanagement.PatientDirectory;
+//import medicalresourcemanagement.Patient;
+//import medicalresourcemanagement.PatientDirectory;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.DefaultComboBoxModel;
@@ -76,9 +76,8 @@ public class manageHousesjPanel extends javax.swing.JPanel {
         tblHouse = new javax.swing.JTable();
         citydropdown = new javax.swing.JComboBox<>();
         commdropdown = new javax.swing.JComboBox<>();
-        hdropdown = new javax.swing.JComboBox<>();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(900, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -191,21 +190,6 @@ public class manageHousesjPanel extends javax.swing.JPanel {
             }
         });
         add(commdropdown, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 190, -1));
-
-        hdropdown.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hdropdownActionPerformed(evt);
-            }
-        });
-        hdropdown.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                hdropdownKeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                hdropdownKeyTyped(evt);
-            }
-        });
-        add(hdropdown, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 620, 230, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtHAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHAActionPerformed
@@ -230,30 +214,18 @@ public class manageHousesjPanel extends javax.swing.JPanel {
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
         
+        if(lblCityVal.getText() == ""  && lblCommval.getText() == "" && lblHAVal.getText() == "" ){
+            
+        
         String housetxt = txtHA.getText().toUpperCase();
         String commtxt = (String) commdropdown.getSelectedItem();        
-//        Checking and Adding community to community list
-//        JOptionPane.showMessageDialog(this,this.communitylist.isCommunityExist(commtxt));
-
-//        if(this.communitylist.isCommunityExist(commtxt)){
-//            JOptionPane.showMessageDialog(this, "Community Already Exists!");            
-//        }
-//        else{
-//            this.communitylist.addNewCommunity(commtxt);
-//            JOptionPane.showMessageDialog(this, "Community added!");
-//        }
-//        JOptionPane.showMessageDialog(this,communitylist.size());
-//        populatecity();
-//        txtCity.setText("");
-//      Finding Community object to add houses
-//        for(Community x: this.communitylist.getCommunitylist()){
-//            if(x.getCommunityName().equals((String)commdropdown.getSelectedItem())){
-//                chosenComm= x;
-//            }
-//        }
+//      
 //        
+        Community selectedComm = communitylist.searchCommunity(commtxt);
+
+
 ////        Checking for house whether exist or not and adding to commlist
-        boolean flag = chosenComm.isHouseExist(housetxt);
+        boolean flag = selectedComm.isHouseExist(housetxt);
 //        JOptionPane.showMessageDialog(this,flag);
 //        JOptionPane.showMessageDialog(this,chosenComm.getCommunityName());
                 
@@ -261,7 +233,7 @@ public class manageHousesjPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "House Already Exists!");            
         }
         else{
-            chosenComm.addNewHouse(housetxt);
+            selectedComm.addNewHouse(housetxt);
             JOptionPane.showMessageDialog(this, "House added!");
         }
         
@@ -278,7 +250,11 @@ public class manageHousesjPanel extends javax.swing.JPanel {
         citydropdown.setSelectedIndex(-1);
         commdropdown.setSelectedIndex(-1);
 //        populateDataToTable();
-           
+        }
+        else{
+                        JOptionPane.showMessageDialog(this, "Please provide all the details");
+
+        }
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void txtHAKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtHAKeyReleased
@@ -355,18 +331,7 @@ public class manageHousesjPanel extends javax.swing.JPanel {
 
     }
     
-    public void populateHouses() {
-      
-        DefaultComboBoxModel model = new DefaultComboBoxModel();
-        
-        for(House h: this.chosenComm.getHouselist()) {
-            model.addElement(h.getHouseAddress());
-        }
-        
-        hdropdown.setModel(model);
-//        commdropdown.setSelectedIndex(-1);
-
-    }
+    
     
     
     private void citydropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_citydropdownActionPerformed
@@ -405,25 +370,12 @@ public class manageHousesjPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_commdropdownKeyReleased
 
-    private void hdropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hdropdownActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_hdropdownActionPerformed
-
-    private void hdropdownKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_hdropdownKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_hdropdownKeyReleased
-
-    private void hdropdownKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_hdropdownKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_hdropdownKeyTyped
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnView;
     private javax.swing.JComboBox<String> citydropdown;
     private javax.swing.JComboBox<String> commdropdown;
-    private javax.swing.JComboBox<String> hdropdown;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

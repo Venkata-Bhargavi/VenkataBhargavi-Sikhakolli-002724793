@@ -16,7 +16,8 @@ public class DoctorDirectory {
     
     
     public DoctorDirectory(){
-        this.doctorHistory = new ArrayList<Doctor>();
+//        this.doctorHistory = new ArrayList<Doctor>();
+        this.doctorHistory = new ArrayList<Doctor>();        
     }
 
     public ArrayList<Doctor> getDoctorHistory() {
@@ -33,6 +34,17 @@ public class DoctorDirectory {
         return d; // returns address 
     }
     public void deleteDoctor(Doctor d){
-    doctorHistory.remove(d);
-}
+        doctorHistory.remove(d);
+    }
+    
+    public boolean isUserNameExist(String username){
+        for (Doctor doctor : doctorHistory)
+        {
+            if(doctor.getUserName() == username || doctor.getUserName().equals(username)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

@@ -57,21 +57,17 @@ public class manageCommunityjPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         cbCommunity = new javax.swing.JTextField();
         btnAddcity = new javax.swing.JButton();
-        btnView = new javax.swing.JButton();
-        btnUpdate = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         lblcommval = new javax.swing.JLabel();
         lblCityVal = new javax.swing.JLabel();
         txtCity = new javax.swing.JTextField();
         citydropdown = new javax.swing.JComboBox<>();
         addCommunity = new javax.swing.JButton();
-        btnAddcomm1 = new javax.swing.JButton();
-        commdropdown = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         lblCityVal1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(900, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -100,22 +96,6 @@ public class manageCommunityjPanel extends javax.swing.JPanel {
             }
         });
         add(btnAddcity, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, -1, -1));
-
-        btnView.setText("View & Update");
-        btnView.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
-            }
-        });
-        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 630, -1, -1));
-
-        btnUpdate.setText("Update");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
-            }
-        });
-        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 630, -1, -1));
 
         jLabel6.setBackground(new java.awt.Color(255, 51, 0));
         jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
@@ -162,21 +142,6 @@ public class manageCommunityjPanel extends javax.swing.JPanel {
         });
         add(addCommunity, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 500, -1, -1));
 
-        btnAddcomm1.setText("Add Community");
-        btnAddcomm1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddcomm1ActionPerformed(evt);
-            }
-        });
-        add(btnAddcomm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 630, -1, -1));
-
-        commdropdown.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                commdropdownActionPerformed(evt);
-            }
-        });
-        add(commdropdown, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 630, 230, -1));
-
         jLabel7.setBackground(new java.awt.Color(255, 51, 0));
         jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -221,15 +186,6 @@ public class manageCommunityjPanel extends javax.swing.JPanel {
     }
     
     
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnViewActionPerformed
-
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-        // TODO add your handling code here:
-                   
-    }//GEN-LAST:event_btnUpdateActionPerformed
-
     private void txtCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCityActionPerformed
@@ -316,7 +272,6 @@ public class manageCommunityjPanel extends javax.swing.JPanel {
             //        chosenCity.addNewCommunity(cbCommunity.getText().toUpperCase());
             //        JOptionPane.showMessageDialog(this, "Community added outside!");
             //        JOptionPane.showMessageDialog(this, "Community added!");
-            populatecommunities();
             citydropdown.setSelectedIndex(-1);
             cbCommunity.setText("");
         }
@@ -324,14 +279,6 @@ public class manageCommunityjPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Please provide all details.");
         }
     }//GEN-LAST:event_addCommunityActionPerformed
-
-    private void btnAddcomm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddcomm1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddcomm1ActionPerformed
-
-    private void commdropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_commdropdownActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_commdropdownActionPerformed
 
     private void citydropdownKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_citydropdownKeyReleased
         // TODO add your handling code here:
@@ -343,32 +290,15 @@ public class manageCommunityjPanel extends javax.swing.JPanel {
         } 
         
         lblCityVal1.setText("");
-        populatecommunities();
     }//GEN-LAST:event_citydropdownKeyReleased
 
-    public void populatecommunities() {
-//        for(Community com: this.chosenCity.getCommunitylist()) {
-//            System.out.println(com.getCommunityName());
-//        }
-        
-        DefaultComboBoxModel model = new DefaultComboBoxModel();
-        
-        for(Community com: this.chosenCity.getCommunitylist()) {
-            model.addElement(com.getCommunityName());
-        }
-        
-        commdropdown.setModel(model);
-    }
+  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addCommunity;
     private javax.swing.JButton btnAddcity;
-    private javax.swing.JButton btnAddcomm1;
-    private javax.swing.JButton btnUpdate;
-    private javax.swing.JButton btnView;
     private javax.swing.JTextField cbCommunity;
     private javax.swing.JComboBox<String> citydropdown;
-    private javax.swing.JComboBox<String> commdropdown;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

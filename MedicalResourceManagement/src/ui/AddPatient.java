@@ -11,6 +11,9 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+import medicalresourcemanagement.CityDirectory;
+import medicalresourcemanagement.CommunityDirectory;
+import medicalresourcemanagement.DoctorDirectory;
 import medicalresourcemanagement.Encounter;
 import medicalresourcemanagement.EncounterHistory;
 import medicalresourcemanagement.Hospital;
@@ -32,7 +35,7 @@ public class AddPatient extends javax.swing.JPanel {
         
         EncounterHistory encounterHistory;    
         ArrayList<Encounter> patientencounterhistory; 
-        JPanel WorkArea;
+        JPanel workArea;
         
         public String checkError;
 
@@ -43,11 +46,11 @@ public class AddPatient extends javax.swing.JPanel {
     /**
      * Creates new form temp
      */
-    public AddPatient(JPanel WorkArea,Patient patient,PatientDirectory patientHistory ,EncounterHistory encounterHistory ) {
+    public AddPatient(JPanel workArea,PatientDirectory patientHistory, DoctorDirectory doctorHistory,EncounterHistory encounterHistory, CityDirectory cityHistory, CommunityDirectory communityHistory ) {
         initComponents();
         this.patientHistory = patientHistory;
         this.encounterHistory = encounterHistory;
-        this.WorkArea = WorkArea;
+        this.workArea = workArea;
         this.patient = patient;
         
     }
@@ -166,6 +169,11 @@ public class AddPatient extends javax.swing.JPanel {
             }
         });
 
+        txtphone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtphoneActionPerformed(evt);
+            }
+        });
         txtphone.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtphoneKeyReleased(evt);
@@ -600,7 +608,7 @@ public class AddPatient extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1037, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1025, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -635,9 +643,9 @@ public class AddPatient extends javax.swing.JPanel {
             per.setName(name);
             per.setAge(age);
             per.setPhone(phone);
-            per.setCommunityName(community);
-            per.setHouse(homeAddress);
-            per.setCity(city);
+//            per.setCommunityName(community);
+//            per.setHouse(homeAddress);
+//            per.setCity(city);
             per.setUserName(userName);
             per.setPassword(password);
 
@@ -650,7 +658,7 @@ public class AddPatient extends javax.swing.JPanel {
             txtphone.setText("");
             cbcommunity.setSelectedIndex(-1);
             txthouseaddress.setText("");
-            txtcity.setText("");
+//            txtcity.setText("");
             txtusername.setText("");
             txtpassword.setText("");
             populateDataToTable();
@@ -681,8 +689,8 @@ public class AddPatient extends javax.swing.JPanel {
         
         selectedEntry.setAge(Integer.parseInt(txtage1.getText()));
         selectedEntry.setPhone(Long.parseLong(txtphone1.getText()));
-        selectedEntry.setHouse(txthouseaddress1.getText());
-        selectedEntry.setCity(txtcity1.getText());
+//        selectedEntry.setHouse(txthouseaddress1.getText());
+//        selectedEntry.setCity(txtcity1.getText());
         selectedEntry.setUserName(txtusername1.getText());
         selectedEntry.setPassword(txtpassword1.getText());
         
@@ -842,9 +850,9 @@ public class AddPatient extends javax.swing.JPanel {
         txtname1.setText(patientHistory.getPatientHistory().get(selectedRowIndex).getName());
         txtage1.setText(String.valueOf(patientHistory.getPatientHistory().get(selectedRowIndex).getAge()));
         txtphone1.setText(String.valueOf(patientHistory.getPatientHistory().get(selectedRowIndex).getPhone()));
-        txthouseaddress1.setText(patientHistory.getPatientHistory().get(selectedRowIndex).getHouse());
-        cbcommunity1.setSelectedItem(patientHistory.getPatientHistory().get(selectedRowIndex).getCommunityName());
-        txtcity1.setText(patientHistory.getPatientHistory().get(selectedRowIndex).getCity());
+//        txthouseaddress1.setText(patientHistory.getPatientHistory().get(selectedRowIndex).getHouse());
+//        cbcommunity1.setSelectedItem(patientHistory.getPatientHistory().get(selectedRowIndex).getCommunityName());
+//        txtcity1.setText(patientHistory.getPatientHistory().get(selectedRowIndex).getCity());
         txtusername1.setText(patientHistory.getPatientHistory().get(selectedRowIndex).getUserName());
         txtpassword1.setText(patientHistory.getPatientHistory().get(selectedRowIndex).getPassword());
 
@@ -906,6 +914,10 @@ public class AddPatient extends javax.swing.JPanel {
     private void cbcommunity1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbcommunity1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbcommunity1ActionPerformed
+
+    private void txtphoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtphoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtphoneActionPerformed
 
     
     
@@ -984,9 +996,9 @@ public class AddPatient extends javax.swing.JPanel {
         row[1] = p.getName();
         row[2] = p.getAge();
         row[3] = p.getPhone();
-        row[4] = p.getCommunityName();
-        row[5] = p.getHouse();
-        row[6] = p.getCity();
+//        row[4] = p.getCommunityName();
+//        row[5] = p.getHouse();
+//        row[6] = p.getCity();
         row[7] = p.getUserName();
         row[8] = p.getPassword();
                 

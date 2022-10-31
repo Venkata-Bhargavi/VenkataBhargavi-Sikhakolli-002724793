@@ -12,6 +12,9 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1500, 1000]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -60,7 +63,7 @@
               <Dimension value="[200, 600]"/>
             </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[100, 700]"/>
+              <Dimension value="[100, 1000]"/>
             </Property>
           </Properties>
           <Constraints>
@@ -74,12 +77,15 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton2" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="Community" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jButton1" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="addPersonBtn" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="btnManageEncounter" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="btnManageDoctor" linkSize="2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Community" linkSize="2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="btnManageHospital" linkSize="2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="addPersonBtn" linkSize="2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="btnManageEncounter" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="btnLogout" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="56" max="32767" attributes="0"/>
                   </Group>
@@ -91,14 +97,16 @@
                       <EmptySpace min="-2" pref="224" max="-2" attributes="0"/>
                       <Component id="addPersonBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnManageDoctor" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="Community" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnManageHospital" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnManageEncounter" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="289" max="32767" attributes="0"/>
+                      <EmptySpace pref="232" max="32767" attributes="0"/>
+                      <Component id="btnLogout" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -112,12 +120,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPersonBtnActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="btnManageDoctor">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Doctor"/>
+                <Property name="text" type="java.lang.String" value="Manage Doctor"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageDoctorActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Community">
@@ -125,12 +133,12 @@
                 <Property name="text" type="java.lang.String" value="Community"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="btnManageHospital">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Manage Hospital"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageHospitalActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnManageEncounter">
@@ -141,12 +149,20 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageEncounterActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JButton" name="btnLogout">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Logout"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLogoutActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="workArea">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[1400, 700]"/>
+              <Dimension value="[1400, 1000]"/>
             </Property>
           </Properties>
           <Constraints>

@@ -15,31 +15,34 @@ import medicalresourcemanagement.Encounter;
 import medicalresourcemanagement.EncounterHistory;
 import medicalresourcemanagement.Hospital;
 import medicalresourcemanagement.HospitalDirectory;
-//import medicalresourcemanagement.Patient;
-//import medicalresourcemanagement.PatientDirectory;
+import medicalresourcemanagement.Patient;
+import medicalresourcemanagement.PatientDirectory;
+import medicalresourcemanagement.Person;
 
 /**
  *
  * @author bhargavi
  */
 public class MainJFrame extends javax.swing.JFrame {
-//    Patient patient;
-//    PatientDirectory patientHistory;
+    Patient patient;
+    PatientDirectory patientHistory;
 //    
-//    Hospital hospital;
-//    HospitalDirectory hospitalHistory;
-//    
-//    Encounter encounter;
-//    EncounterHistory encounterHistory;
-//    
-//    Doctor doctor;
-//    DoctorDirectory doctorHistory;
+    Hospital hospital;
+    HospitalDirectory hospitalHistory;
+    
+    Encounter encounter;
+    EncounterHistory encounterHistory;
+    
+    Doctor doctor;
+    DoctorDirectory doctorHistory;
     
     Community community;
     CommunityDirectory communityHistory;
 //    
     City city;
     CityDirectory cityHistory;
+    
+    Person person;
     
     
     
@@ -50,25 +53,42 @@ public class MainJFrame extends javax.swing.JFrame {
     public MainJFrame() {
         initComponents();
 //        patient = new Patient();
-//        patientHistory = new PatientDirectory(); // calling constructor which has ArrayList<Person> initialization 
+        this.patientHistory = new PatientDirectory(); // calling constructor which has ArrayList<Person> initialization 
 //        
 //        hospital = new Hospital();
-//        hospitalHistory = new HospitalDirectory();
-//        
-//        encounter = new Encounter();
-//        encounterHistory = new EncounterHistory();
-//        
-//        doctor = new Doctor();
-//        doctorHistory = new DoctorDirectory();
-        city = new City();
-        cityHistory = new CityDirectory();
+//        this.hospitalHistory = new HospitalDirectory();
         
-        community = new Community();
-        communityHistory = new CommunityDirectory();
+//        encounter = new Encounter();
+        this.encounterHistory = new EncounterHistory();
+        
+//        doctor = new Doctor();
+        this.doctorHistory = new DoctorDirectory();
+        
+//        city = new City();
+        this.cityHistory = new CityDirectory();
+        
+//        community = new Community();
+        this.communityHistory = new CommunityDirectory();
+        
+//        person = new Person();
         
         
         
     }
+    public MainJFrame(PatientDirectory patientHistory, DoctorDirectory doctorHistory,EncounterHistory encounterHistory, CityDirectory cityHistory, CommunityDirectory communityHistory){
+        initComponents ();
+        this.patientHistory = patientHistory;
+        this.communityHistory = communityHistory;
+        this.cityHistory = cityHistory;
+        this.doctorHistory = doctorHistory;
+        this.encounterHistory = encounterHistory;
+//        this.hospitalHistory = hospitalHistory;
+    }
+    
+//    public MainJFrame(CommunityDirectory communityHistory,CityDirectory cityHistory){
+//        this.communityHistory = communityHistory;
+//        this.cityHistory = cityHistory;
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -186,10 +206,15 @@ public class MainJFrame extends javax.swing.JFrame {
         String user = cbUser.getSelectedItem().toString();
         String userName = txtUserName.getText();
         String password = pfPassword.getText();
-  
-        if(user.equals("Community Admin") && !userName.equals("") && !password.equals("")){
+          if(user.equals("System Admin") && !userName.equals("") && !password.equals("")){
+              this.setVisible(false);
+            SystemAdminView sav = new SystemAdminView( patientHistory,  doctorHistory, encounterHistory,  cityHistory,  communityHistory);
+            sav.setVisible(true);
+            
+        }
+          else if(user.equals("Community Admin") && !userName.equals("") && !password.equals("")){
             this.setVisible(false);
-            CommunityAdminPage sav = new CommunityAdminPage(cityHistory,communityHistory);
+            CommunityAdminPage sav = new CommunityAdminPage(  patientHistory,  doctorHistory, encounterHistory,  cityHistory,  communityHistory);
             sav.setVisible(true);
 
         }
@@ -200,12 +225,7 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSubmitActionPerformed
 
           
-//        if(user.equals("System Admin") && !userName.equals("") && !password.equals("")){
-//              this.setVisible(false);
-//            SystemAdminView sav = new SystemAdminView(patientHistory,patient,doctorHistory,encounterHistory,hospitalHistory);
-//            sav.setVisible(true);
-//            
-//        }
+
     /**
      * @param args the command line arguments
      */

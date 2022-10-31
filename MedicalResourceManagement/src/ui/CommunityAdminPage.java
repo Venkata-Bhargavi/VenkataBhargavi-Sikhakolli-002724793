@@ -12,9 +12,10 @@ import medicalresourcemanagement.DoctorDirectory;
 import medicalresourcemanagement.EncounterHistory;
 import medicalresourcemanagement.Hospital;
 import medicalresourcemanagement.HospitalDirectory;
-//import medicalresourcemanagement.Patient;
-//import medicalresourcemanagement.PatientDirectory;
+import medicalresourcemanagement.Patient;
+import medicalresourcemanagement.PatientDirectory;
 import java.awt.CardLayout;
+import medicalresourcemanagement.Encounter;
 
 /**
  *
@@ -22,30 +23,33 @@ import java.awt.CardLayout;
  */
 public class CommunityAdminPage extends javax.swing.JFrame {
     
-//    PatientDirectory patientlist;
-//    Patient patient;
-//    DoctorDirectory doctorlist;
-//    Doctor doctor;
-//    EncounterHistory encounterhistory;
-//    HospitalDirectory hospitallist;
-//    Hospital hospital;
+    PatientDirectory patientHistory;
+    Patient patient;
+    DoctorDirectory doctorHistory;
+    Doctor doctor;
+    EncounterHistory encounterhistory;
+    HospitalDirectory hospitalHistory;
+    Hospital hospital;
     CommunityDirectory communityHistory;
-//    Community community;
+    Encounter encounter;
+    EncounterHistory encounterHistory;
+
     
     CityDirectory cityHistory;
     
     /**
      * Creates new form SystemAdmin
      */
-    public CommunityAdminPage( CityDirectory citylist, CommunityDirectory communitylist) {
+    public CommunityAdminPage(PatientDirectory patientHistory, DoctorDirectory doctorHistory,EncounterHistory encounterHistory, CityDirectory cityHistory, CommunityDirectory communityHistory) {
         initComponents();
 //        this.patientlist = patientlist;
 //        this.doctorlist = doctorlist;
 //        this.encounterhistory = encounterhistory;
 //        this.hospitallist = hospitallist;
-        this.communityHistory = communitylist;
+        this.communityHistory = communityHistory;
 //        this.community = community;
-        this.cityHistory = citylist;
+        this.cityHistory = cityHistory;
+        pack();
     }
 
     /**
@@ -65,21 +69,22 @@ public class CommunityAdminPage extends javax.swing.JFrame {
         WorkArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1500, 1000));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        controlPanel.setBackground(new java.awt.Color(255, 153, 153));
+        controlPanel.setBackground(new java.awt.Color(204, 204, 204));
         controlPanel.setForeground(new java.awt.Color(102, 102, 0));
-        controlPanel.setPreferredSize(new java.awt.Dimension(200, 700));
+        controlPanel.setPreferredSize(new java.awt.Dimension(200, 1000));
 
-        hosbtn.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        hosbtn.setText("Manage Houses");
+        hosbtn.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        hosbtn.setText("Manage House");
         hosbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hosbtnActionPerformed(evt);
             }
         });
 
-        commbtn.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        commbtn.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         commbtn.setText("Manage Community");
         commbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,34 +105,28 @@ public class CommunityAdminPage extends javax.swing.JFrame {
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(commbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(controlPanelLayout.createSequentialGroup()
-                        .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(hosbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnlogout))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(hosbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnlogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(commbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnlogout, hosbtn});
-
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(283, 283, 283)
+                .addGap(219, 219, 219)
                 .addComponent(commbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
-                .addGap(69, 69, 69)
+                .addGap(35, 35, 35)
                 .addComponent(hosbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(248, 248, 248)
+                .addGap(34, 34, 34)
                 .addComponent(btnlogout)
-                .addGap(20, 20, 20))
+                .addGap(332, 332, 332))
         );
 
         SplitPane.setLeftComponent(controlPanel);
 
-        WorkArea.setBackground(new java.awt.Color(255, 204, 204));
-        WorkArea.setPreferredSize(new java.awt.Dimension(1100, 700));
+        WorkArea.setBackground(new java.awt.Color(204, 204, 255));
+        WorkArea.setPreferredSize(new java.awt.Dimension(1300, 1000));
         WorkArea.setLayout(new java.awt.CardLayout());
         SplitPane.setRightComponent(WorkArea);
 
@@ -153,14 +152,16 @@ public class CommunityAdminPage extends javax.swing.JFrame {
         WorkArea.add("manageHousesjPanel", mp);
         CardLayout cardlayout = (CardLayout) WorkArea.getLayout();
         cardlayout.next(WorkArea);
-//        SplitPane.setRightComponent(mp);
     }//GEN-LAST:event_hosbtnActionPerformed
 
     private void btnlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlogoutActionPerformed
         // TODO add your handling code here:
-//        this.setVisible(false);
-//        userLoginPage ulp = new userLoginPage(patientlist, doctorlist, encounterhistory, hospitallist, communitylist);
-//        ulp.setVisible(true);
+//
+//        MainJFrame mjf = new MainJFrame(patientHistory,communityHistory, cityHistory,/*doctorHistory,*/encounterHistory, hospitalHistory);
+        this.setVisible(false);
+        MainJFrame mjf = new MainJFrame( patientHistory,  doctorHistory, encounterHistory,  cityHistory,  communityHistory);
+
+        mjf.setVisible(true);
     }//GEN-LAST:event_btnlogoutActionPerformed
 
     /**
