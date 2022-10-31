@@ -14,6 +14,33 @@ public class Person {
     private long phone;
     private String userName;
     private String password;
+    private String city;
+    private String community;
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCommunity() {
+        return community;
+    }
+
+    public void setCommunity(String community) {
+        this.community = community;
+    }
+
+    public String getHouse() {
+        return house;
+    }
+
+    public void setHouse(String house) {
+        this.house = house;
+    }
+    private String house;
 
     public String getName() {
         return name;
