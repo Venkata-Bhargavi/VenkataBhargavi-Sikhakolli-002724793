@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author bhargavi
  */
-public class EncounterHistory {
+public class EncounterHistory extends VitalSigns{
     private ArrayList<Encounter> encounterHistory;
     private ArrayList<Encounter> personencounterHistory;
 

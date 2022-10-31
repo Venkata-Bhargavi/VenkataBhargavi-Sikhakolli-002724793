@@ -64,7 +64,7 @@ public class Encounter extends VitalSigns {
         return patientID;
     }
 
-    public void setPatientID(int patientID) {
+        public void setPatientID(int patientID) {
         this.patientID = patientID;
     }
 

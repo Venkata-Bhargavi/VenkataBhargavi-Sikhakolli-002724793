@@ -252,8 +252,8 @@ public class SystemAdminView extends javax.swing.JFrame {
     private void btnManageEncounterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEncounterActionPerformed
         // TODO add your handling code here:
         
-//        manageEncounterjPanel mejp = new manageEncounterjPanel(workArea,patientHistory,patient,encounterHistory);
-//        splitPane.setRightComponent(mejp);
+        manageEncounterjPanel mejp = new manageEncounterjPanel(workArea,patientHistory,patient,encounterHistory);
+        splitPane.setRightComponent(mejp);
         
     }//GEN-LAST:event_btnManageEncounterActionPerformed
 
