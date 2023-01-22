@@ -6,82 +6,48 @@ package medicalresourcemanagement;
 
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
-public class Person {
-    private String name;
-    private int age;
-    private long phone;
-    private String userName;
-    private String password;
-    private String city;
-    private String community;
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getCommunity() {
-        return community;
-    }
-
-    public void setCommunity(String community) {
-        this.community = community;
-    }
-
-    public String getHouse() {
-        return house;
-    }
-
-    public void setHouse(String house) {
-        this.house = house;
-    }
-    private String house;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public long getPhone() {
-        return phone;
-    }
-
-    public void setPhone(long phone) {
-        this.phone = phone;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
+public class Person extends House {
+    String personName;
+    int personAge;
+    String personGender;
     
+    public Person(){}
+    
+    
+    public Person(String personName, String personGender, int personAge, String houseAddress, String communityName, String cityName)
+    {
+        this.personName = personName;
+        this.personGender = personGender;
+        this.personAge = personAge;
+        super.houseAddress = houseAddress;
+//        super.cityName = cityName;
+//        super.communityName = communityName;
+    }
+
+    public String getPersonName() {
+        return personName;
+    }
+
+    public void setPersonName(String personName) {
+        this.personName = personName;
+    }
+
+    public int getPersonAge() {
+        return personAge;
+    }
+
+    public void setPersonAge(int personAge) {
+        this.personAge = personAge;
+    }
+    
+    public String getPersonGender() {
+        return personGender;
+    }
+
+    public void setPersonGender(String personGender) {
+        this.personGender = personGender;
+    }
     
 }

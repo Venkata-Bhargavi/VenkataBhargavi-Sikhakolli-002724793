@@ -8,30 +8,29 @@ import java.util.ArrayList;
 
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
 public class CityDirectory {
     
-    ArrayList<City> cityHistory ;
-    
+    ArrayList<City> citylist ;
     public CityDirectory(){
-        this.cityHistory = new ArrayList<City>();
+        this.citylist = new ArrayList<City>();
 
     }
 
     public ArrayList<City> getCitylist() {
-        return cityHistory;
+        return citylist;
     }
 
     public void setCitylist(ArrayList<City> citylist) {
-        this.cityHistory = citylist;
+        this.citylist = citylist;
     }
     
     
     public void addNewCity(String cityName){
         City newCity = new City();
         newCity.setCityName(cityName);
-        cityHistory.add(newCity);
+        citylist.add(newCity);
 //        return newCity;
         
     } 
@@ -39,7 +38,7 @@ public class CityDirectory {
     
     
     public City searchCity(String cityName){
-        for(City city: cityHistory){
+        for(City city: citylist){
             if(city.getCityName().equals(cityName)){
                 return city;
             }
@@ -48,7 +47,7 @@ public class CityDirectory {
     }
     
     public boolean isCityExist(String cityName){
-        for(City city: cityHistory){
+        for(City city: citylist){
             if(city.getCityName().equals(cityName)){
                 return true;
             }

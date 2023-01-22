@@ -8,42 +8,36 @@ import java.time.LocalDateTime;
 
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
 public class Encounter extends VitalSigns {
     LocalDateTime encounter_time; 
     private static int count = 0;
     int encounter_id;
-    int patientID;
-    String patient_name;
-    String community;
-    String city;    
-    int hospital_id;
-    int doctor_id;
-
-    public int getHospital_id() {
-        return hospital_id;
-    }
-
-    public void setHospital_id(int hospital_id) {
-        this.hospital_id = hospital_id;
-    }
-
-    public int getDoctor_id() {
-        return doctor_id;
-    }
-
-    public void setDoctor_id(int doctor_id) {
-        this.doctor_id = doctor_id;
-    }
-    
-    
+    String hospital_name;
+    String doctor_name;
     
     public Encounter(){
-        this.encounter_id = count;
-        count++;
+            this.encounter_id = count;
+            count++;
+        }
+
+    public String getHospital_name() {
+        return hospital_name;
     }
 
+    public void setHospital_name(String hospital_name) {
+        this.hospital_name = hospital_name;
+    }
+
+    public String getDoctor_name() {
+        return doctor_name;
+    }
+
+    public void setDoctor_name(String doctor_name) {
+        this.doctor_name = doctor_name;
+    }
+    
     public LocalDateTime getEncounter_time() {
         return encounter_time;
     }
@@ -60,41 +54,7 @@ public class Encounter extends VitalSigns {
         this.encounter_id = encounter_id;
     }
 
-    public int getPatientID() {
-        return patientID;
-    }
-
-        public void setPatientID(int patientID) {
-        this.patientID = patientID;
-    }
-
-    public String getPatient_name() {
-        return patient_name;
-    }
-
-    public void setPatient_name(String patient_name) {
-        this.patient_name = patient_name;
-    }
-
-    
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getCommunity() {
-        return community;
-    }
-
-    public void setCommunity(String community) {
-        this.community = community;
-    }
 
    
-    
     
 }

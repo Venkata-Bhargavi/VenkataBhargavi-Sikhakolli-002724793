@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package ui;
+package UI;
 
 import medicalresourcemanagement.City;
 import medicalresourcemanagement.CityDirectory;
@@ -21,7 +21,7 @@ import static javax.swing.JOptionPane.ERROR_MESSAGE;
 
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
 public class manageHospitaljPanel extends javax.swing.JPanel {
 
@@ -45,10 +45,9 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
 //        btnSearch.setEnabled(false);
 //        btnSave.setEnabled(false);
         populatecity();
-//        citydropdown.setSelectedIndex(-1);
-//            commdropdown.setSelectedIndex(-1);
+//        btnSearch.setEnabled(false);
+
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -83,6 +82,7 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
         ddci = new javax.swing.JComboBox<>();
         btnSearch = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(900, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -125,6 +125,7 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
         });
         add(txthn, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 405, 155, -1));
 
+        commdropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Community", "Brigham", "Huntington Avenue", "Mission Hill", "Brookline", "Fenway" }));
         commdropdown.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 commdropdownActionPerformed(evt);
@@ -285,7 +286,7 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         
-        if(/*ec.getText() == ""  && ecomm.getText() == "" && */ehn.getText() == "" && ehi.getText() == "" )
+        if(ec.getText() == ""  && ecomm.getText() == "" && ehn.getText() == "" && ehi.getText() == "" )
         {   btnSave.setEnabled(true);
             String selectedCommText = commdropdown.getSelectedItem().toString();
             Community selectedComm = communitylist.searchCommunity(selectedCommText);
@@ -300,18 +301,14 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Hospital added!");
             }
             
-            citydropdown.setSelectedIndex(-1);
-            commdropdown.setSelectedIndex(-1);
             txthid.setText("");
             txthn.setText("");
-            btnUpdate.setEnabled(false);
+//            btnUpdate.setEnabled(false);
+            btnSearch.setEnabled(true);
         }
         else{
             JOptionPane.showMessageDialog(this, "Please provide all details.");
         }
-        
-        citydropdown.setSelectedIndex(-1);
-            commdropdown.setSelectedIndex(-1);
         
         
     }//GEN-LAST:event_btnSaveActionPerformed
@@ -342,9 +339,12 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
         txthid.setText(String.valueOf(selectedHos.getHospitalId()));
         txthn.setText(selectedHos.getHospitalName());
         
+        ec.setText("");
+        ecomm.setText("");
+        
         citydropdown.setEnabled(false);
         commdropdown.setEnabled(false);
-//        btnSave.setEnabled(false);
+        btnSave.setEnabled(false);
         btnUpdate.setEnabled(true);
     }//GEN-LAST:event_btnEditActionPerformed
 
@@ -365,21 +365,16 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
         selectedHos.setHospitalName(txthn.getText());
         
 //        populateDataToTable();
-        
-            populateDataTable(selectedComm, chosenComm.getCommunityName(), chosenCity.getCityName() );
-        
+        populateDataTable(selectedComm, chosenComm.getCommunityName(), chosenCity.getCityName() );
 //        
         //once deleted all the fiels in view model will be deleted
-        citydropdown.setSelectedIndex(-1);
-        commdropdown.setSelectedIndex(-1);
-        
         txthid.setText("");
         txthn.setText("");
         btnSave.setEnabled(true);
         btnUpdate.setEnabled(false);
         citydropdown.setEnabled(true);
         commdropdown.setEnabled(true);
-        
+           
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -404,13 +399,13 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
 
     private void citydropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_citydropdownActionPerformed
         // TODO add your handling code here:
-//        if(citydropdown.getSelectedIndex() != (-1)){
-//            ec.setText("");            
-//        }
-//        else{
-//            ec.setText("Select a City.");
-//        }
-//        
+        if(citydropdown.getSelectedIndex() != (-1)){
+            ec.setText("");            
+        }
+        else{
+            ec.setText("Select a City.");
+        }
+        
         //        this.chosenCity = (City) citydropdown.getSelectedItem();
 //        JOptionPane.showMessageDialog(this, citydropdown.getSelectedItem());
 
@@ -425,12 +420,12 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
     private void commdropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_commdropdownActionPerformed
         // TODO add your handling code here:
         
-//        if(commdropdown.getSelectedIndex() != (-1)){
-//            ecomm.setText("");            
-//        }
-//        else{
-//            ecomm.setText("Select a Community.");
-//        }
+        if(commdropdown.getSelectedIndex() != (-1)){
+            ecomm.setText("");            
+        }
+        else{
+            ecomm.setText("Select a Community.");
+        }
         
         for(Community comm: chosenCity.getCommunitylist()){
             if(comm.getCommunityName().equals(commdropdown.getSelectedItem()))
@@ -452,12 +447,10 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
         if(!patternmatch.matches())
         {
             ehn.setText("Please Enter a Valid Name.");
-            checkError = "error";
         }
         else
         {
             ehn.setText("");
-            checkError = null;
         }
     }//GEN-LAST:event_txthnKeyReleased
 
@@ -469,7 +462,6 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
         if(!patternmatch.matches())
         {
             ehi.setText("Please Enter a Valid Number.");
-            checkError = null;
         }
         else
         {
@@ -499,8 +491,12 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
 //            city, comm, pull hospital list and throw to the table
             Community selectedComm = communitylist.searchCommunity(chosenComm.getCommunityName());
             
-            populateDataTable(selectedComm, chosenComm.getCommunityName(), chosenCity.getCityName() );
-            
+            if(selectedComm.getHospitallist().size() > 0) {
+                populateDataTable(selectedComm, chosenComm.getCommunityName(), chosenCity.getCityName() );
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"No Hospitals in selected Community.");
+            }
 //            boolean flag = selectedComm.isHouseExist(housetxt);
 //    //        JOptionPane.showMessageDialog(this,flag);
 //    //        JOptionPane.showMessageDialog(this,chosenComm.getCommunityName());
@@ -519,7 +515,7 @@ public class manageHospitaljPanel extends javax.swing.JPanel {
             
         }
         else{
-            btnSearch.setEnabled(false);
+            JOptionPane.showMessageDialog(this,"Select City and Community.");
         }
         
         

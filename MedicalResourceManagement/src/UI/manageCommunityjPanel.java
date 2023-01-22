@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package ui;
+package UI;
 
 import medicalresourcemanagement.City;
 import medicalresourcemanagement.CityDirectory;
@@ -21,7 +21,7 @@ import javax.swing.DefaultComboBoxModel;
 
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
 public class manageCommunityjPanel extends javax.swing.JPanel {
     
@@ -33,7 +33,7 @@ public class manageCommunityjPanel extends javax.swing.JPanel {
     /**
      * Creates new form AddHospital
      */
-    public manageCommunityjPanel(CityDirectory citylist/*, CommunityDirectory communitylist*/) {
+    public manageCommunityjPanel(CityDirectory citylist) {
         initComponents();
         this.citylist = citylist;
         lblCityVal1.setText("Select a City!");
@@ -97,7 +97,7 @@ public class manageCommunityjPanel extends javax.swing.JPanel {
         });
         add(btnAddcity, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, -1, -1));
 
-        jLabel6.setBackground(new java.awt.Color(255, 51, 0));
+        jLabel6.setBackground(new java.awt.Color(51, 51, 51));
         jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -144,7 +144,7 @@ public class manageCommunityjPanel extends javax.swing.JPanel {
 
         jLabel7.setBackground(new java.awt.Color(255, 51, 0));
         jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Manage Cities");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 1068, -1));
@@ -265,13 +265,6 @@ public class manageCommunityjPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Community added!");
             }
             
-            //        if(chosenCity.getCommunitylist().size()==0){
-            //            chosenCity.addNewCommunity(cbCommunity.getText().toUpperCase());
-            //            JOptionPane.showMessageDialog(this, "Community added and have empty comm list earlier!");
-            //        }
-            //        chosenCity.addNewCommunity(cbCommunity.getText().toUpperCase());
-            //        JOptionPane.showMessageDialog(this, "Community added outside!");
-            //        JOptionPane.showMessageDialog(this, "Community added!");
             citydropdown.setSelectedIndex(-1);
             cbCommunity.setText("");
         }
@@ -290,9 +283,22 @@ public class manageCommunityjPanel extends javax.swing.JPanel {
         } 
         
         lblCityVal1.setText("");
+//        populatecommunities();
     }//GEN-LAST:event_citydropdownKeyReleased
-
-  
+//
+//    public void populatecommunities() {
+////        for(Community com: this.chosenCity.getCommunitylist()) {
+////            System.out.println(com.getCommunityName());
+////        }
+//        
+//        DefaultComboBoxModel model = new DefaultComboBoxModel();
+//        
+//        for(Community com: this.chosenCity.getCommunitylist()) {
+//            model.addElement(com.getCommunityName());
+//        }
+//        
+//        commdropdown.setModel(model);
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addCommunity;

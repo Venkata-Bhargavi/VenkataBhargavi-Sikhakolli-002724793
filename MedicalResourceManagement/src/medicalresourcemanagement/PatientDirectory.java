@@ -5,42 +5,50 @@
 package medicalresourcemanagement;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
 public class PatientDirectory {
-    
-    private ArrayList<Patient> patientHistory; // declaration
-    
-    
+    private ArrayList<Patient> patientlist;
+    HashMap<String, String> patCredentialsMap; 
+    Set<String> unique_communities = new HashSet<String>();
+
     public PatientDirectory(){
-        this.patientHistory = new ArrayList<Patient>();
-    }
-
-    public ArrayList<Patient> getPatientHistory() {
-        return patientHistory;
-    }
-
-    public void setPatientHistory(ArrayList<Patient> personHistory) {
-        this.patientHistory = personHistory;
+        this.patientlist = new ArrayList<Patient>();
+        this.patCredentialsMap = new HashMap();
     }
     
-    public Patient addNewPatient(){
-        Patient p = new Patient(); // object p stores the  address of  a new object of a class
-        patientHistory.add(p);  // stores the address ref into array list
-        return p; // returns address 
+    public Patient addNewEmployee(){
+        Patient newEmployee = new Patient();
+        patientlist.add(newEmployee);
+        return newEmployee;    
     }
-    public void deletePatient(Person p){
-    patientHistory.remove(p);
-}
+
+    public void deletePatient(Patient ei) {
+        patientlist.remove(ei);
+    }
+
+    public ArrayList<Patient> getPatientlist() {
+        return patientlist;
+    }
+
+    public void setPatientlist(ArrayList<Patient> patientlist) {
+        this.patientlist = patientlist;
+    }
+
     
-    public Patient searchPatient(int patientid)
+    
+    
+    public Patient searchPatientId(int patientid) 
     {
-        for (Patient encounterPatient : patientHistory)
+        for (Patient encounterPatient : patientlist) 
         {
-            if (encounterPatient.getPatientId() == patientid)
+            if (encounterPatient.getPatientID() == patientid) 
             {
                 return encounterPatient;
             }
@@ -50,9 +58,39 @@ public class PatientDirectory {
     
    
     
+//    public HashMap<String, String> fetchPatientCredantials(){
+//        
+//        for (Patient patient : patientlist) 
+//        {
+//            credentialsMap.put(patient.getUsername(), patient.getPassword());
+//        }
+//        return credentialsMap;
+//    }
     
+    public boolean isUserNameExist(String username){
+        for (Patient patient : patientlist) 
+        {
+            if(patient.getUsername() == username || patient.getUsername().equals(username)){
+                return true;
+            }
+        }
+        return false;
+    }
     
+    public Set fetchUniqueCommunities(){
+
+        for(Patient patient: patientlist){
+//                unique_communities.add(patient.getCommunityName());
+        }
+        return unique_communities;
+    }
     
-    
-    
+    public HashMap<String, String> getPatientCredentails(){
+        patCredentialsMap.put("", "");
+        for(Patient pat: patientlist){
+            patCredentialsMap.put(pat.getUsername(), pat.getPassword());
+        }
+        return patCredentialsMap;
+    }
+                                                                                                                                                                                                                                                                    
 }

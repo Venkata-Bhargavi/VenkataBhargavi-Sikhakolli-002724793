@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
-public class EncounterHistory extends VitalSigns{
+public class EncounterHistory {
     private ArrayList<Encounter> encounterHistory;
     private ArrayList<Encounter> personencounterHistory;
 
@@ -31,14 +31,14 @@ public class EncounterHistory extends VitalSigns{
     
     public ArrayList<Encounter> searchPatient(int patientID) 
     {
-        for (Encounter encounterPerson : encounterHistory) 
-        {   
-            personencounterHistory.clear();
-            if (encounterPerson.getPatientID() == patientID) 
-            {
-                personencounterHistory.add(encounterPerson);
-            }
-        }
+//        for (Encounter encounterPerson : encounterHistory) 
+//        {   
+//            personencounterHistory.clear();
+//            if (encounterPerson.getPatientID() == patientID) 
+//            {
+//                personencounterHistory.add(encounterPerson);
+//            }
+//        }
         return personencounterHistory;
     }
 

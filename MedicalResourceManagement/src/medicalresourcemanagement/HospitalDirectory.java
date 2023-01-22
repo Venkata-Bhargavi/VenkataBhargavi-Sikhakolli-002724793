@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
 public class HospitalDirectory {
         private ArrayList<Hospital> hospitalHistory; // declaration
@@ -36,8 +36,5 @@ public class HospitalDirectory {
     public void deleteHospital(Hospital h){
     hospitalHistory.remove(h);
 }
-    public ArrayList<Hospital> gethospitalList(){
-        return hospitalHistory;
-    }
 
 }

@@ -6,7 +6,7 @@ package medicalresourcemanagement;
 
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
 public class VitalSigns {
     double bloodPressure;

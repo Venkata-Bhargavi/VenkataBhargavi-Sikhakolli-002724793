@@ -4,35 +4,25 @@
  */
 package medicalresourcemanagement;
 
+import java.util.HashMap;
+import java.util.Map;
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
-public class Doctor extends Person{
-     private int DoctorId;
-    private static int count = 0;
+public class Doctor{
+    int doctorID;
+    private static int count = 1;
+    String doctorName;
+    String city;
+    String community;
+    String hospitalname;
+    String username;
+    String password;
     
-    private String city;
-    private String community;
-    private String doctorName;
-    private String hospitalName;
-    private String userName;
-    private String passsword;
-
-    public String getPasssword() {
-        return passsword;
-    }
-
-    public void setPasssword(String passsword) {
-        this.passsword = passsword;
-    }
-
-    public String getHospitalName() {
-        return hospitalName;
-    }
-
-    public void setHospitalName(String hospitalName) {
-        this.hospitalName = hospitalName;
+    public Doctor(){
+        this.doctorID = count;
+        count++;
     }
 
     public String getCity() {
@@ -51,6 +41,14 @@ public class Doctor extends Person{
         this.community = community;
     }
 
+    public String getHospitalname() {
+        return hospitalname;
+    }
+
+    public void setHospitalname(String hospitalname) {
+        this.hospitalname = hospitalname;
+    }
+    
     public String getDoctorName() {
         return doctorName;
     }
@@ -58,32 +56,32 @@ public class Doctor extends Person{
     public void setDoctorName(String doctorName) {
         this.doctorName = doctorName;
     }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
- 
-   
-
-    public int getDoctorId() {
-        return DoctorId;
-    }
-
-    public void setDoctorId(int DoctorId) {
-        this.DoctorId = DoctorId;
-    }
-
     
-    
-    public Doctor()  // this happens along with intializing 
-    {
-        this.DoctorId = count;
-        count++;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
+//    Hashmap <String, String> doc_login_cred_map =new Hashmap();
+
+    public int getDoctorID() {
+        return doctorID;
+    }
+
+    public void setDoctorID(int doctorID) {
+        this.doctorID = doctorID;
+    }
+  
 }

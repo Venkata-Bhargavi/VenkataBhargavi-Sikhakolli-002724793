@@ -4,30 +4,86 @@
  */
 package medicalresourcemanagement;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
-public class Patient extends Person{
+public class Patient  extends Person{
+    int patientID;
+    private static int count = 1;
+    String username;
+    String password;
+    String city;
+    String community;
     
-    private int patientId;
-    private static int count = 0;
-
-    public int getPatientId() {
-        return patientId;
-    }
-
-    public void setPatientId(int patientId) {
-        this.patientId = patientId;
-    }
-
+    ArrayList<Encounter> encounterlist;
     
-    public Patient()  // this happens along with intializing 
-    {
-        this.patientId = count;
+    public Patient(){
+        this.patientID = count;
+        this.encounterlist = new ArrayList<Encounter>();
         count++;
     }
+
+    public ArrayList<Encounter> getEncounterlist() {
+        return encounterlist;
+    }
+
+    public void setEncounterlist(ArrayList<Encounter> encounterlist) {
+        this.encounterlist = encounterlist;
+    }
+
+    public Encounter addNewEncounter(){
+        Encounter enc = new Encounter();
+        encounterlist.add(enc);
+        return enc;
+    }
+    
+    public void deleteEncounter(Encounter h){
+        encounterlist.remove(h);
+    }
+    
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCommunity() {
+        return community;
+    }
+
+    public void setCommunity(String community) {
+        this.community = community;
+    }
     
     
+
+    public int getPatientID() {
+        return patientID;
+    }
+
+    public void setPatientID(int patientID) {
+        this.patientID = patientID;
+    }
+    
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
     
 }

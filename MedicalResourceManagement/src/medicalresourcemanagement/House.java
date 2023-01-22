@@ -6,20 +6,17 @@ package medicalresourcemanagement;
 
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
-public class House {
-    private String houseAddress;
+public class House{
+    String houseAddress;
 
     public String getHouseAddress() {
         return houseAddress;
     }
 
-    public void setHouseAddress(String houseAddress) {
-        this.houseAddress = houseAddress;
+    public void setHouseAddress(String HouseAddress) {
+        this.houseAddress = HouseAddress;
     }
-
-    
-    
     
 }

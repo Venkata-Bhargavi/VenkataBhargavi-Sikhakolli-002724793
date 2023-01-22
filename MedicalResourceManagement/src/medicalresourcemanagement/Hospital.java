@@ -5,7 +5,7 @@
 package medicalresourcemanagement;
 /**
  *
- * @author bhargavi
+ * @author Krishnakanth Naik Jarapala
  */
 public class Hospital {
     //ArrayList<Hospital>
